@@ -1,8 +1,16 @@
 import React from 'react'
+import StudentCard from "../components/StudentCard"
+import Cities from "../components/Cities"
 
 const Page2 = () => {
+    
+    
+      
   return (
-    <div>Page2</div>
+    <div>
+            <StudentCard/>
+            <Cities/>
+    </div>
   )
 }
 

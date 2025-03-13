@@ -44,7 +44,7 @@ const Page1 = () => {
         className="h-[40vh] w-full pt-10 flex flex-col justify-center items-center"
       >
         <div className="h-full w-full overflow-x-hidden bg-blue-100">
-          <h1 className="pt-10  text-center text-2xl font-Montserrat font-bold text-blue-600">
+          <h1 className="pt-10  text-center text-3xl font-Montserrat font-bold text-blue-600">
             Top Commines Hiring Now
           </h1>
           <div className="flex justify-center">
