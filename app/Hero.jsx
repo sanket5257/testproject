@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -31,9 +32,9 @@ const Hero = () => {
                   <button className=" border-3 font-bold text-2xl text-white rounded-md  h-[7vh] w-[18vw]">
                     sign in{" "}
                   </button>
-                  <button className=" border-3 font-bold text-2xl  text-white rounded-md  h-[7vh] w-[18vw]">
+                  <Link href="/Signup" className=" border-3 font-bold text-2xl flex justify-center items-center  text-white rounded-md  h-[7vh] w-[18vw]">
                     sign up{" "}
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div id="Hrlogin" className="mr-16 bg-cover opacity-70 flex  flex-col gap-4 items-center justify-center pt-4 rounded-lg border-2 border-white h-full w-[40vw] bg-[url(/loginbg.jpeg)]">
