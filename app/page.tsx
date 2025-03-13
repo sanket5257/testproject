@@ -7,7 +7,7 @@ import Page3 from './Page3'
 
 const page = () => {
   return (
-    <div>
+    <div className='bg-white'>
 
     <Hero/>
     <Page1/>

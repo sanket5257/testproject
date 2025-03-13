@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cities = () => {
 
-const cities=["mumbai","pune","banglore","mumbai","pune"]
+const cities=["Mumbai","Pune","Banglore","Mumbai","Pune"]
 
   return (
     <div>
