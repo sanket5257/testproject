@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from './Hero'
-import Hire from './Hire'
+import Page1 from './Page1'
+import Page2 from './Page2'
 
 
 const page = () => {
@@ -8,7 +9,8 @@ const page = () => {
     <div>
 
     <Hero/>
-    <Hire/>
+    <Page1/>
+    <Page2/>
 
 
 

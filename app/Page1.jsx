@@ -1,9 +1,15 @@
 import React from "react";
 
-const Hire = () => {
-
-const company=["appendFile","amazon","wipro","infotech","appendFile","amazon"]
-console.log(company)
+const Page1 = () => {
+  const company = [
+    "appendFile",
+    "amazon",
+    "wipro",
+    "infotech",
+    "appendFile",
+    "amazon",
+  ];
+  console.log(company);
 
   return (
     <div className="h-screen w-full">
@@ -37,21 +43,26 @@ console.log(company)
         id="Topcompanies"
         className="h-[40vh] w-full pt-10 flex flex-col justify-center items-center"
       >
-        <div className="h-full w-full bg-blue-100">
+        <div className="h-full w-full overflow-x-hidden bg-blue-100">
           <h1 className="pt-10  text-center text-2xl font-Montserrat font-bold text-blue-600">
             Top Commines Hiring Now
           </h1>
           <div className="flex justify-center">
-          {company.map((company , {key}) => {
-                    return <img className="size-50" src="./apple.png" alt="" />
-                 })}
+            {company.map((companyItem, index) => {
+              return (
+                <img
+                  key={index} 
+                  className="size-50"
+                  src="./apple.png"
+                  alt="company logo"
+                />
+              );
+            })}
           </div>
-                 
-          
         </div>
       </div>
     </div>
   );
 };
 
-export default Hire;
+export default Page1;
