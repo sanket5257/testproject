@@ -23,7 +23,7 @@ const cities=["Mumbai","Pune","Banglore","Mumbai","Pune"]
                   src={`./${city}.jpeg`}
                   alt="company logo"
                 />
-                <h1 className='font-Montserrat font-bold pt-4'>{city}</h1>
+                <h1 className='font-Montserrat text-black font-bold pt-4'>{city}</h1>
                 </div>
               );
             })}

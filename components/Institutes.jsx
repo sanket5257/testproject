@@ -13,7 +13,7 @@ const Institutes = () => {
           <h1 className="pt-10  text-center text-3xl font-Montserrat font-bold text-blue-600">
           Tie-up Institute
           </h1>
-          <div className="flex pt-6 justify-center gap-4 items-center">
+          <div className="flex pt-6 bg-white justify-center gap-4 items-center">
             {institutes.map((institute, index) => {
               return (
                 <div key={index} className='flex  flex-col justify-center items-center  size-60 overflow-hidden  border-black' >
@@ -22,7 +22,7 @@ const Institutes = () => {
                   src={`./${institute}.jpeg`}
                   alt="company logo"
                 />
-                <h1 className='font-Montserrat font-bold pt-4'>{institute}</h1>
+                <h1 className='font-Montserrat text-black font-bold pt-4'>{institute}</h1>
                 </div>
               );
             })}
