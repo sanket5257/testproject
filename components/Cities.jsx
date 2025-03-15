@@ -11,7 +11,7 @@ const cities=["Mumbai","Pune","Banglore","Mumbai","Pune"]
         className="h-[40vh] w-full pt-10 flex flex-col justify-center items-center"
       >
         <div className="h-full w-full ">
-          <h1 className="pt-10  text-center text-3xl font-Montserrat font-bold text-blue-600">
+          <h1 className="pt-10  text-center text-3xl font-Montserrat font-bold text-blue-500">
           Jobs In Major Cities
           </h1>
           <div className="flex pt-6 justify-center gap-4 items-center">
