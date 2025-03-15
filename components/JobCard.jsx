@@ -46,7 +46,7 @@ const JobCard = () => {
   ];
 
   return (
-    <div>
+    <div className='bg-white'>
       <div
         id="JobCards"
         className="h-auto font-Montserrat w-full flex flex-col justify-center items-center"

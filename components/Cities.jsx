@@ -5,10 +5,10 @@ const Cities = () => {
 const cities=["Mumbai","Pune","Banglore","Mumbai","Pune"]
 
   return (
-    <div>
+    <div className='bg-white'>
         <div
         id="Topcompanies"
-        className="h-[40vh] w-full pt-10 flex flex-col justify-center items-center"
+        className="h-[40vh] bg-white w-full pt-10 flex flex-col justify-center items-center"
       >
         <div className="h-full w-full ">
           <h1 className="pt-10  text-center text-3xl font-Montserrat font-bold text-blue-500">

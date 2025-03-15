@@ -8,7 +8,7 @@ import Cities from '../../components/Cities'
 
 const Page = () => {
   return (
-    <div className='bg-white text-black h-screen w-full'>
+    <div className='bg-white text-black w-full'>
         <Header2/>
           <div
         id="Hothiring"
@@ -43,7 +43,7 @@ const Page = () => {
 
       <div
         id="upcoming-Exhibition"
-        className="h-[60vh] w-full mt-24 flex flex-col justify-center items-center"
+        className="h-[60vh] w-full bg-white mt-24 flex flex-col justify-center items-center"
       >
         <h1 className="pb-10  text-center text-3xl font-Montserrat font-bold text-blue-500">
           {" "}
