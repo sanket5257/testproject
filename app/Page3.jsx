@@ -4,12 +4,12 @@ import Institues from "../components/Institutes"
 
 const Page3 = () => {
   return (
-    <div className="h-screen w-full pt-10">
+    <div className=" w-full pt-10 md:pt-20">
       <div
         id="upcoming-Exhibition"
-        className="h-[60vh] w-full pt-10 flex flex-col justify-center items-center"
+        className="md:h-[60vh] h-[20vh] w-full pt-10 flex flex-col justify-center items-center"
       >
-        <h1 className="pb-10  text-center text-3xl font-Montserrat font-bold text-blue-600">
+        <h1 className="pb-10  text-center md:text-3xl font-Montserrat font-bold text-blue-600">
           {" "}
           Upcoming Exhibition
         </h1>

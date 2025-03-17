@@ -12,12 +12,12 @@ const Page1 = () => {
   console.log(company);
 
   return (
-    <div className="h-screen w-full">
+    <div className=" w-full">
       <div
         id="Hothiring"
-        className="h-[60vh] w-full pt-10 flex flex-col justify-center items-center"
+        className="h-[25vh] md:h-[60vh] w-full pt-10 flex flex-col justify-center items-center"
       >
-        <h1 className="pb-10  text-center text-2xl font-Montserrat font-bold text-blue-600">
+        <h1 className="pb-10  text-center md:text-3xl font-Montserrat font-bold text-blue-600">
           {" "}
           HOT HIRING
         </h1>
@@ -41,10 +41,10 @@ const Page1 = () => {
 
       <div
         id="Topcompanies"
-        className="h-[40vh] w-full pt-10 flex flex-col justify-center items-center"
+        className="h-[20vh] md:h-[40vh] w-full pt-14 md:pt-10 flex flex-col justify-center items-center"
       >
         <div className="h-full w-full overflow-x-hidden bg-blue-100">
-          <h1 className="pt-10  text-center text-3xl font-Montserrat font-bold text-blue-600">
+          <h1 className=" text-center md:text-3xl font-Montserrat font-bold text-blue-600">
             Top Commines Hiring Now
           </h1>
           <div className="flex justify-center">
@@ -52,7 +52,7 @@ const Page1 = () => {
               return (
                 <img
                   key={index} 
-                  className="size-50"
+                  className="md:size-50 size-16 "
                   src="./apple.png"
                   alt="company logo"
                 />

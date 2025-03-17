@@ -36,29 +36,23 @@ const StudentCard = () => {
           platform: "JobPortal",
           salary: "18 LPA"
         },
-        {
-          name: "employee1",
-          position: "Product Manager",
-          company: "Facebook",
-          platform: "TalentConnect",
-          salary: "25 LPA"
-        }
+        
       ];
 
 
        
 
   return (
-    <div className="h-screen w-full">
+    <div className=" pt-4 w-full">
       <div
         id="students"
-        className="h-full w-full overflow-x-hidden pt-10 flex flex-col justify-center items-center"
+        className="h-full w-full overflow-x-hidden md:pt-10 flex flex-col justify-center items-center"
       >
-        <h1 className="pb-10  text-center text-4xl font-Montserrat font-bold text-blue-600">
+        <h1 className="md:pb-10  text-center md:text-4xl  font-Montserrat font-bold text-blue-600">
         Students Placed Highest Packages
         </h1>
 
-        <div className=" h-[68vh] overflow-x-hidden p-4  flex justify-center items-center gap-6  rounded-xl">
+        <div className=" md:h-[68vh] h-[17vh] w-full overflow-x-hidden p-4  flex justify-center items-center md:gap-6 gap-2  rounded-xl">
         
           {student.map((student,index)=>{
             return (
