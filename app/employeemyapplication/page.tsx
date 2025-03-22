@@ -114,7 +114,7 @@ const Page = () => {
             <h2 className="text-4xl font-bold mb-4">My Applications</h2>
           </div>
           <h3 className="font-Montserrat mb-4 text-[#4F7594]">
-            You can track the jobs you've applied to here
+            You can track the jobs youve applied to here
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
             {sortedJobs.map((job) => (

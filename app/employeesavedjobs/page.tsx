@@ -102,7 +102,7 @@ const Page = () => {
         <h2 className="text-4xl font-bold mb-4 font-Montserrat">Saved Jobs</h2>
 
         </div>
-          <h3 className='font-Montserrat mb-4 text-[#4F7594] text-center md:text-start'>Saved jobs—apply when you're ready</h3>
+          <h3 className='font-Montserrat mb-4 text-[#4F7594] text-center md:text-start'>Saved jobs—apply when youre ready</h3>
           <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
             {sortedJobs.map((job) => (
               <div key={job.id} className="p-4 flex justify-between items-center bg-[#F7FAFA] border shadow-lg rounded-lg">
