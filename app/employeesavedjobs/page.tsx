@@ -4,22 +4,42 @@ import React, { useState } from 'react';
 
 const Page = () => {
   const [filters, setFilters] = useState({ jobType: "", location: "", sortBy: "new" });
-  const [appliedJobs, setAppliedJobs] = useState([
-    { id: 1, title: "Frontend Developer", company: "Tech Corp", location: "Remote",expireddate: "Expire on January 30, 2025",companylogo:"./twitter.png" },
-    { id: 2, title: "Backend Engineer", company: "Code Labs", location: "New York", expireddate: "Expire on January 30, 2025",companylogo:"./google.svg" },
-    { id: 3, title: "UI/UX Designer", company: "Design Studio", location: "San Francisco", expireddate: "Expire on January 30, 2025",companylogo:"./apple.png" }
-  ]);
-
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-
-  // Sorting logic
-  const sortedJobs = [...appliedJobs].sort((a, b) => {
-    // if (filters.sortBy === "new") return new Date(b.date) - new Date(a.date);
-    // if (filters.sortBy === "old") return new Date(a.date) - new Date(b.date);
-    if (filters.sortBy === "a-z") return a.title.localeCompare(b.title);
-    if (filters.sortBy === "z-a") return b.title.localeCompare(a.title);
-    return 0;
-  });
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+  
+    // Example job data
+    const appliedJobs = [
+      {
+        id: 1,
+        title: "Frontend Developer",
+        company: "Tech Corp",
+        location: "Remote",
+        expireddate: "Applied on January 30, 2025",
+        companylogo: "./twitter.png",
+      },
+      {
+        id: 2,
+        title: "Backend Engineer",
+        company: "Code Labs",
+        location: "New York",
+        expireddate: "Applied on January 30, 2025",
+        companylogo: "./google.svg",
+      },
+      {
+        id: 3,
+        title: "UI/UX Designer",
+        company: "Design Studio",
+        location: "San Francisco",
+        expireddate: "Applied on January 30, 2025",
+        companylogo: "./apple.png",
+      },
+    ];
+  
+    // Sorting logic
+    const sortedJobs = [...appliedJobs].sort((a, b) => {
+      if (filters.sortBy === "a-z") return a.title.localeCompare(b.title);
+      if (filters.sortBy === "z-a") return b.title.localeCompare(a.title);
+      return 0;
+    });
 
   return (
    <>
