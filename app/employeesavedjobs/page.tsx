@@ -24,7 +24,7 @@ const Page = () => {
   return (
    <>
    <div>
-   <Header3/>
+   <Header3 setIsSidebarOpen={""} />
 
    </div>
    <div className="flex flex-col font-Montserrat md:flex-row w-full min-h-screen pt-16 bg-white text-black">
