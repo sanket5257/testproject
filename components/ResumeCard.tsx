@@ -22,9 +22,9 @@ const resumeData = [
 
 const ResumeCard = () => {
   return (
-    <div className='px-10 pt-6 flex flex-wrap gap-4 justify-between items-center'>
+    <div className='md:px-10 pt-6 flex flex-col md:flex-row flex-wrap gap-4 justify-between items-center'>
       {resumeData.map((resume, index) => (
-        <div key={index} className='flex justify-evenly items-center border border-[#004C99] bg-[#D9EBFF] rounded-lg w-[31.5vw] h-[15vh]'>
+        <div key={index} className='flex justify-evenly items-center border border-[#004C99] bg-[#D9EBFF] rounded-lg md:w-[31.5vw] w-[90vw] h-[15vh]'>
           <img src={resume.image} alt={resume.name} className='size-20'/>
             <div>
             <h3 className='text-2xl mb-2 text-[#004C99] font-semibold'>{resume.name}</h3>

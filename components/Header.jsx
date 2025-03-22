@@ -34,7 +34,7 @@ const Header = () => {
         </div>
 
         {/* Navigation (for md and above) */}
-        <div className="hidden lg:flex justify-evenly items-center w-1/3">
+        <div className="hidden lg:flex lg:text-sm justify-evenly items-center w-1/3">
           <h1>Home</h1>
           <h1>Article & Blog</h1>
           <h1>Community</h1>
@@ -68,11 +68,11 @@ const Header = () => {
           <h1>Article & Blog</h1>
           <h1>Community</h1>
           <h1>Exhibitions</h1>
-          <div className="flex flex-col gap-2 w-full">
-            <button className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md h-9 w-full">
+          <div className="flex flex-col gap-2 justify-center items-center w-full">
+            <button className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md h-9 w-[35vw]">
               Sign Up
             </button>
-            <button className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md h-9 w-full">
+            <button className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md h-9 w-[35vw] ">
               Sign In
             </button>
           </div>
