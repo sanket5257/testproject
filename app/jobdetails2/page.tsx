@@ -50,7 +50,7 @@ const page = () => {
             <h1 className='font-bold md:text-lg text-sm'>Description</h1>
             <h3 className='text-[#787878]'>Join our dynamic team as a Software Engineer, where you will be responsible for developing innovative software solutions and collaborating with cross-functional teams.</h3>
             <h1 className='font-bold text-lg'>Requirements</h1>
-            <h3 className='text-[#787878]'>Bachelor's degree in Computer Science or related field, 3+ years of software development experience, proficiency in Java, Python, or C++.</h3>
+            <h3 className='text-[#787878]'>Bachelors degree in Computer Science or related field, 3+ years of software development experience, proficiency in Java, Python, or C++.</h3>
                     <h1 className='font-bold text-lg'>Beneficial Skills</h1>
                     <h3 className='text-[#787878]'>Communication: The ability to share ideas and feelings, and to listen actively . Problem-solving: The ability to understand and resolve situations </h3>
                     <h1 className='font-bold text-lg'>Benefits</h1>
