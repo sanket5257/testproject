@@ -1,68 +1,61 @@
-import React from 'react';
+import React from 'react'
 
-const JobCard = () => {
-  const jobs = [
-    {
-      company: 'google',
-      jobTitle: 'Senior Product Manager',
-      location: 'Pune, Maharashtra',
-      jobType: 'Full Time',
-      postedDate: 'March 14, 2025',
-      detailsLink: '#',
-    },
-    {
-      company: 'google',
-      jobTitle: 'Senior Product Manager',
-      location: 'Pune, Maharashtra',
-      jobType: 'Full Time',
-      postedDate: 'March 14, 2025',
-      detailsLink: '#',
-    },
-    {
-      company: 'google',
-      jobTitle: 'Senior Product Manager',
-      location: 'Pune, Maharashtra',
-      jobType: 'Full Time',
-      postedDate: 'March 14, 2025',
-      detailsLink: '#',
-    },
-    {
-      company: 'google',
-      jobTitle: 'Senior Product Manager',
-      location: 'Pune, Maharashtra',
-      jobType: 'Full Time',
-      postedDate: 'March 14, 2025',
-      detailsLink: '#',
-    },
-    {
-      company: 'google',
-      jobTitle: 'Software Engineer',
-      location: 'Bangalore, Karnataka',
-      jobType: 'Part Time',
-      postedDate: 'March 12, 2025',
-      detailsLink: '#',
-    },
-    
-  ];
-
+const SimilarJobs = () => {
+    const jobs = [
+        
+        {
+          company: 'google',
+          jobTitle: 'Senior Product Manager',
+          location: 'Pune, Maharashtra',
+          jobType: 'Full Time',
+          postedDate: 'March 14, 2025',
+          detailsLink: '#',
+        },
+        {
+          company: 'google',
+          jobTitle: 'Senior Product Manager',
+          location: 'Pune, Maharashtra',
+          jobType: 'Full Time',
+          postedDate: 'March 14, 2025',
+          detailsLink: '#',
+        },
+        {
+          company: 'google',
+          jobTitle: 'Software Engineer',
+          location: 'Bangalore, Karnataka',
+          jobType: 'Part Time',
+          postedDate: 'March 12, 2025',
+          detailsLink: '#',
+        },
+        {
+            company: 'google',
+            jobTitle: 'Software Engineer',
+            location: 'Bangalore, Karnataka',
+            jobType: 'Part Time',
+            postedDate: 'March 12, 2025',
+            detailsLink: '#',
+          },
+        
+      ];
   return (
-    <div className='bg-white'>
+    <div>
+      <div className='bg-white'>
       <div
         id="JobCards"
         className="h-auto font-Montserrat w-full flex flex-col justify-center items-center"
       >
-        <div className="h-full w-full">
-          <h1 className="pt-10 text-center md:text-3xl font-Montserrat font-bold text-blue-500">
-            Jobs Based On Your Applies
+        <div className="h-full w-[70vw]">
+          <h1 className="pt-10  md:text-3xl font-Montserrat font-bold text-blue-500">
+            Similar Jobs
           </h1>
-          <div className="flex pt-6 flex-nowrap overflow-x-auto w-full md:justify-center gap-5 items-center">
+          <div className="flex pt-6 flex-wrap overflow-x-auto w-full justify-start gap-5 items-center">
             {jobs.map((job, index) => {
               return (
                 <div
                   key={index}
                   className="flex flex-col justify-between items-center p-2    bg-white shadow-xl rounded-lg border border-gray-300"
                 >
-                  <div className="bg-blue-100 rounded-xl md:w-[16vw] w-[55vw] h-full p-2">
+                  <div className=" rounded-xl md:w-[16vw] w-[55vw] h-full p-2">
                     <div className="flex justify-between items-center">
                       <div className="flex gap-1">
                         <img className="size-8" src="./google.svg" alt="company logo" />
@@ -110,7 +103,8 @@ const JobCard = () => {
         </div>
       </div>
     </div>
-  );
-};
+    </div>
+  )
+}
 
-export default JobCard;
+export default SimilarJobs

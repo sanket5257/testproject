@@ -14,29 +14,21 @@ const TopCompanyBox = () => {
     <div>
         <div
         id="Topcompanies"
-        className="h-[45vh] w-full pt-10 flex flex-col justify-center items-center"
+        className="h-[20vh] md:h-[40vh] w-full pt-14 md:pt-10 flex flex-col justify-center items-center"
       >
-        <div className="h-full w-full  bg-blue-100">
-          <h1 className="pt-10  text-center text-3xl font-Montserrat font-bold text-blue-500">
-          Jobs By Top Companies
+        <div className="h-full w-full overflow-x-hidden bg-blue-100">
+          <h1 className=" text-center md:text-3xl font-Montserrat font-bold text-blue-600">
+            Top Commines Hiring Now
           </h1>
-          <div className="flex justify-center gap-8">
+          <div className="flex justify-center">
             {company.map((companyItem, index) => {
               return (
-                <div key={index} className='h-[25vh] w-[15vw] flex flex-col justify-center items-center'>
-                    <img
-                   
-                  className="size-50"
+                <img
+                  key={index} 
+                  className="md:size-50 size-16 "
                   src="./apple.png"
                   alt="company logo"
                 />
-                <a
-                    href={""}
-                    className="mt-2 w-[15vw] text-center py-2 bg-[#004C99] text-white text-sm font-medium rounded-md hover:bg-blue-700"
-                  >
-                    See Details
-                  </a>
-                </div>
               );
             })}
           </div>

@@ -95,7 +95,7 @@ const Page = () => {
         <div className="w-full md:w-3/4 md:p-18 p-6">
         <div className='flex gap-2 justify-center items-center md:justify-start'>
         <img src='./filter.png'
-          className="md:hidden size-8 rounded mb-4"
+          className="md:hidden size-8 border p-1.5 mr-2 rounded mb-4"
           onClick={() => setIsFilterOpen(true)}
         >
         </img>
