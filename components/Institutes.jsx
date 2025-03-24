@@ -7,7 +7,7 @@ const Institutes = () => {
     <div>
         <div
         id="Topcompanies"
-        className="md:h-[40vh] h-[18vh] w-full pt-10 flex flex-col justify-center items-center"
+        className="md:h-[40vh] mb-22 h-[18vh] w-full pt-10 flex flex-col justify-center items-center"
       >
         <div className="h-full  w-full ">
           <h1 className="pt-10  text-center md:text-3xl font-Montserrat font-bold text-blue-600">

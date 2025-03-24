@@ -56,14 +56,14 @@ const JobCardSkillBased = () => {
           <h1 className="pt-10 text-center md:text-3xl font-Montserrat font-bold text-blue-500">
             Jobs Based On Your Applies
           </h1>
-          <div className="flex pt-6 flex-nowrap overflow-x-auto w-full md:justify-center gap-5 items-center">
+          <div className="flex pt-6 flex-nowrap overflow-x-auto w-full md:justify-center pl-10 gap-5 items-center">
             {jobs.map((job, index) => {
               return (
                 <div
                   key={index}
                   className="flex flex-col justify-between items-center p-2    bg-white shadow-xl rounded-lg border border-gray-300"
                 >
-                  <div className="bg-blue-1 rounded-xl md:w-[16vw] w-[55vw] h-full p-2">
+                  <div className=" rounded-xl md:w-[26vw] lg:w-[20vw] xl:w-[16vw] w-[50vw] sm:w-[35vw] h-full p-2">
                     <div className="flex justify-between items-center">
                       <div className="flex gap-1">
                         <img className="size-8" src="./google.svg" alt="company logo" />

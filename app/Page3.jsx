@@ -1,5 +1,6 @@
 import React from 'react'
 import Institues from "../components/Institutes"
+import Footer from '@/components/Footer';
 
 
 const Page3 = () => {
@@ -32,6 +33,7 @@ const Page3 = () => {
       </div>
 
       <Institues/>
+      <Footer/>
 
       
     </div>
