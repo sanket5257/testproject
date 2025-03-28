@@ -76,11 +76,11 @@ const Page = () => {
   ];
 
   // Sorting logic
-  const sortedJobs = [...appliedJobs].sort(() => {
-    // if (filters.sortBy === "a-z") return a.title.localeCompare(b.title);
-    // if (filters.sortBy === "z-a") return b.title.localeCompare(a.title);
-    return 0;
-  });
+  // const sortedJobs = [...appliedJobs].sort(() => {
+  //   // if (filters.sortBy === "a-z") return a.title.localeCompare(b.title);
+  //   // if (filters.sortBy === "z-a") return b.title.localeCompare(a.title);
+  //   return 0;
+  // });
 
   return (
     <>
