@@ -15,12 +15,15 @@ const Header = () => {
 
   return (
     <div className="bg-white w-full z-50 absolute text-black">
-      <div className="h-[7vh] bg-white w-full flex justify-between items-center px-5 md:px-10">
+      <div className="h-[10vh] bg-white w-full flex justify-between items-center px-5 md:px-10">
         {/* Logo */}
         <div className="h-full flex items-center justify-start w-1/3">
-          <h1 className="text-[4vw] md:text-[2vw] text-black font-Montserrat font-light">
+          {/* <h1 className="text-[4vw] md:text-[2vw] text-black font-Montserrat font-light">
             <span className="text-blue-600 font-medium">Textile</span>Voice
-          </h1>
+          </h1> */}
+          <div className="h-full ">
+            <img className="h-full w-full object-cover p-4" src="./logo.jpg" alt="" />
+          </div>
         </div>
 
         {/* Mobile Navigation Button */}
@@ -36,7 +39,7 @@ const Header = () => {
         {/* Navigation (for md and above) */}
         <div className="hidden lg:flex lg:text-sm justify-evenly items-center w-1/3">
           <h1>Home</h1>
-          <h1>Article & Blog</h1>
+          <h1>Blog</h1>
           <h1>Community</h1>
           <h1>Exhibitions</h1>
         </div>

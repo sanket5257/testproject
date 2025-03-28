@@ -6,7 +6,7 @@ const Form = () => {
     <div className=' w-full font-Montserrat text-lg'>
       <Header/>
             
-<div className=" bg-white md:flex md:pt-[30vh] pt-[10vh]">
+<div className=" bg-white md:flex md:pt-[15vh] pt-[10vh]">
 	<div
 		className="relative overflow-hidden md:flex md:w-1/2 bg-white justify-around items-center">
 		<img src="./signupbg.jpeg" alt="" />

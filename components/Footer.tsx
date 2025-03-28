@@ -1,9 +1,22 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 
 const Footer = () => {
+
+  const [cat, setCat] = useState('')
+
+useEffect(() => {
+
+  fetch('https://catfact.ninja/fact')
+  .then(response => response.json())
+  .then(json => setCat(json.fact))
+  .catch(error => console.error('Error:', error));
+}, [])
+
+
   return (
     <div className='w-full overflow-x-hidden text-white font-Montserrat bg-[#161616]'>
-      <div className='p-10 flex justify-evenly items-start'>
+      <div className='p-10 flex flex-wrap gap-12 justify-evenly items-start'>
         <div className='flex flex-col justify-between items-center gap-4'>
         <h1 className="text-[4vw] md:text-[1.5vw] text-white font-Montserrat font-light">
             <span className="text-blue-600 font-medium">Textile</span>Voice
@@ -22,8 +35,8 @@ const Footer = () => {
         </div>
 
         <div className='flex flex-col justify-center items-start gap-1'>
-        <a href="">Help Center</a>
-        <a href="">Summons/Notices</a>
+        <a href="">Home</a>
+        <a href="">Notices</a>
         <a href="">Grievances</a>
         <a href="">Report issue</a>
         

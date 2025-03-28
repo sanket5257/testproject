@@ -6,6 +6,8 @@ import Page3 from './Page3'
 
 
 const page = () => {
+
+  
   return (
     <div className='bg-white'>
 
