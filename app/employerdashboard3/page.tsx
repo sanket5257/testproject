@@ -92,9 +92,9 @@ const Page = () => {
         {/* Mobile Button to Open Filter & Sort */}
         {/* Sidebar Filter & Sort (Hidden on Desktop) */}
         <div
-          className={`fixed inset-0 bg-whit w-3/4 flex flex-col gap-4 items-start pl-10 pt-10 rounded-2xl bg-white  border shadow-lg transition-transform transform ${
+          className={`fixed inset-0 flex flex-col gap-4 items-start p-10 pt-10 rounded-2xl bg-white  border shadow-lg transition-transform transform ${
             isFilterOpen ? "translate-x-0" : "-translate-x-full"
-          } md:translate-x-10  md:mt-10  md:w-[15vw] md:relative`}
+          } md:translate-x-10  md:mt-10  md:relative`}
         >
           <button
             className="md:hidden text-red-500 font-bold text-lg mt-10"
@@ -102,7 +102,7 @@ const Page = () => {
           >
             ✖ Close
           </button>
-          <h2 className="text-xl text-[#004C99] font-bold mb-4">Filter & Sort</h2>
+          <h2 className="text-xl text-black font-bold mb-4">Filters</h2>
 
           {/* Job Type Radio Buttons */}
           <div className="mb-4 flex flex-col gap-2">
@@ -158,47 +158,47 @@ const Page = () => {
             </div>
           </div>
           
-          <div className="flex pt-6 flex-wrap justify-center gap-5 items-center">
-            {sortedJobs.map((job, index) => {
+          <div className="flex pt-6  w-full flex-wrap pl-10 gap-5 justify-center items-center">
+            {appliedJobs.map((job, index) => {
               return (
                 <div
                   key={index}
-                  className="flex flex-col justify-between items-center p-2 md:w-[16.5vw] md:h-[42vh] h-[50vh] w-[70vw] bg-white shadow-xl rounded-lg border border-gray-300"
+                  className="flex flex-col justify-between items-center p-2    bg-white shadow-xl rounded-lg border border-gray-300"
                 >
-                    <div className='bg-blue-100 rounded-xl w-full h-full p-2'>
-                        <div className='flex justify-between items-center'>
-                            <div className='flex gap-1'>
-                            <img className='size-8' src="./google.svg" alt="company logo" />
-                            <p className="text-sm text-gray-600 mt-2">{job.company}</p>
-                            </div>
-                            <div className='flex gap-1'>
-                                <div className='bg-white flex justify-center items-center size-8 rounded-full'>
-                                    <img className='size-7' src="./save.svg" alt="save" />
-                                </div>
-                                <div className='bg-white flex justify-center items-center size-8 rounded-full'>
-                                    <img  className='size-7' src="./save.svg" alt="save" />
-                                </div>
-                            </div>
+                  <div className="bg-blue-100 rounded-xl md:w-[26vw] lg:w-[20vw] xl:w-[16vw] w-[50vw] sm:w-[35vw] h-full p-2">
+                    <div className="flex justify-between items-center">
+                      <div className="flex gap-1">
+                        <img className="size-8" src="./google.svg" alt="company logo" />
+                        <p className="text-sm text-gray-600 mt-2">{job.company}</p>
+                      </div>
+                      <div className="flex gap-1">
+                        <div className="bg-white flex justify-center items-center size-8 rounded-full">
+                          <img className="size-7" src="./save.svg" alt="save" />
                         </div>
-                        <div className=' h-[8vh]'>
-                        <h2 className="text-xl font-Montserrat font-semibold text-black">
-                    {job.jobTitle}
-                  </h2>
+                        <div className="bg-white flex justify-center items-center size-8 rounded-full">
+                          <img className="size-7" src="./save.svg" alt="save" />
                         </div>
-                  
-                  <p className="text-sm text-gray-600 mt-2">{job.location}</p>
-                  <div className='h-[10vh] flex-wrap flex justify-start gap-2 items-center'>
-                  <p className="text-sm border-2 px-3 py-1 rounded-xl inline-block text-gray-600 mt-2">{job.jobType}</p>
-                  <p className="text-sm border-2 px-3 py-1 rounded-xl inline-block text-gray-600 mt-2">{job.jobType}</p>
-                  <p className="text-sm border-2 px-3 py-1 rounded-xl inline-block text-gray-600 mt-2">{job.jobType}</p>
+                      </div>
+                    </div>
+                    <div className="h-[8vh]">
+                      <h2 className="text-xl font-Montserrat font-semibold text-black">
+                        {job.jobTitle}
+                      </h2>
+                    </div>
+                    <div className="h-[4vh]">
+                    <p className="text-sm text-gray-600 mt-2">{job.location}</p>
 
-                  </div>
+                    </div>
 
-                  <div className='flex justify-between h-[4vh] w-full mt-2 items-end' >
-                  <p className="text-sm  text-gray-600">Posted Date: {job.postedDate}</p>
+                    <div className="h-[10vh] flex-wrap flex justify-start gap-2 items-center">
+                      <p className="text-[1.6vh] border-2 p-0.5   rounded-xl inline-block text-gray-600 mt-2">{job.jobType}</p>
+                      <p className="text-[1.6vh] border-2 p-0.5  rounded-xl inline-block text-gray-600 mt-2">{job.jobType}</p>
+                      <p className="text-[1.6vh] border-2 p-0.5  rounded-xl inline-block text-gray-600 mt-2">{job.jobType}</p>
+                    </div>
 
-                  </div>
-                  
+                    <div className="flex justify-between h-[4vh] w-full mt-2 items-end">
+                      <p className="text-sm text-gray-600">Posted Date: {job.postedDate}</p>
+                    </div>
                   </div>
                   <a
                     href={job.detailsLink}

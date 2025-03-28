@@ -8,19 +8,19 @@ const cities=["Mumbai","Pune","Banglore","Mumbai","Pune"]
     <div className='bg-white'>
         <div
         id="Topcompanies"
-        className="md:h-[40vh] h-[18vh] bg-whit w-full pt-10 flex flex-col justify-center items-center"
+        className="  bg-whit w-full pt-10 flex flex-col justify-center items-center"
       >
         <div className="h-full w-full ">
 
           <h1 className=" md:pt-10 text-center md:text-3xl font-Montserrat font-bold text-blue-500">
           Jobs In Major Cities
           </h1>
-          <div className="flex h-full w-full justify-center md:gap-4 items-center">
+          <div className="flex h-full w-full justify-center overflow-x-auto  gap-6 items-center">
             {cities.map((city, index) => {
               return (
-                <div key={index} className='flex flex-col justify-center items-center  size-60 overflow-hidden  border-black' >
+                <div key={index} className='flex flex-col justify-center shrink-0 items-center  overflow-hidden  border-black' >
                     <img
-                  className="md:size-50 size-15 rounded-xl shadow-xl"
+                  className="size-30 md:size-50 rounded-xl shadow-xl"
                   src={`./${city}.jpeg`}
                   alt="company logo"
                 />

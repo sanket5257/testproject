@@ -7,18 +7,18 @@ const Institutes = () => {
     <div>
         <div
         id="Topcompanies"
-        className="md:h-[40vh] mb-22 h-[18vh] w-full pt-10 flex flex-col justify-center items-center"
+        className=" w-full pt-10 pb-10 flex flex-col justify-center items-center"
       >
         <div className="h-full  w-full ">
-          <h1 className="pt-10  text-center md:text-3xl font-Montserrat font-bold text-blue-600">
+          <h1 className="pt-10 pb-10  text-center md:text-3xl font-Montserrat font-bold text-blue-600">
           Tie-up Institute
           </h1>
-          <div className="flex md:pt-6 pt-6 bg-white justify-center gap-4 items-center">
+          <div className="flex h-full w-full justify-center overflow-x-auto  gap-6 items-center">
             {institutes.map((institute, index) => {
               return (
-                <div key={index} className='flex   flex-col justify-center items-center  md:size-60 overflow-hidden  border-black' >
+                <div key={index} className='flex flex-col justify-center shrink-0 items-center  overflow-hidden  border-black' >
                     <img
-                  className="md:size-50 size-15 rounded-xl shadow-xl"
+                  className="size-30 md:size-50 rounded-xl shadow-xl"
                   src={`./${institute}.jpeg`}
                   alt="company logo"
                 />

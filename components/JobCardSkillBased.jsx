@@ -43,6 +43,22 @@ const JobCardSkillBased = () => {
           postedDate: 'March 12, 2025',
           detailsLink: '#',
         },
+        {
+          company:'google',
+        jobTitle: 'Senior Product Manager',
+        location: 'Pune, Maharashtra',
+        jobType: 'Full Time',
+        postedDate: 'March 14, 2025',
+        detailsLink: '#',
+      },
+      {
+          company:'google',
+        jobTitle: 'Software Engineer',
+        location: 'Bangalore, Karnataka',
+        jobType: 'Part Time',
+        postedDate: 'March 12, 2025',
+        detailsLink: '#',
+      },
         // Add more job data as needed
       ];
 
@@ -56,7 +72,7 @@ const JobCardSkillBased = () => {
           <h1 className="pt-10 text-center md:text-3xl font-Montserrat font-bold text-blue-500">
             Jobs Based On Your Applies
           </h1>
-          <div className="flex pt-6 flex-nowrap overflow-x-auto w-full md:justify-center pl-10 gap-5 items-center">
+          <div className="flex pt-6 flex-nowrap overflow-x-auto w-full md:justify-start pl-10 gap-5 items-center">
             {jobs.map((job, index) => {
               return (
                 <div

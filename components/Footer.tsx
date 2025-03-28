@@ -3,15 +3,15 @@ import React, { useEffect, useState } from 'react'
 
 const Footer = () => {
 
-  const [cat, setCat] = useState('')
+//   const [cat, setCat] = useState('')
 
-useEffect(() => {
+// useEffect(() => {
 
-  fetch('https://catfact.ninja/fact')
-  .then(response => response.json())
-  .then(json => setCat(json.fact))
-  .catch(error => console.error('Error:', error));
-}, [])
+//   fetch('https://catfact.ninja/fact')
+//   .then(response => response.json())
+//   .then(json => setCat(json.fact))
+//   .catch(error => console.error('Error:', error));
+// }, [])
 
 
   return (
@@ -33,7 +33,7 @@ useEffect(() => {
         <a href="">community</a>
         <a href="">Exhibitions</a>
         </div>
-
+        
         <div className='flex flex-col justify-center items-start gap-1'>
         <a href="">Home</a>
         <a href="">Notices</a>
@@ -56,10 +56,10 @@ useEffect(() => {
                     <p>Get real time textile job update on our app</p>
                 </div>
                 <div className='flex pb-6 justify-between gap-10 items-center'>
-                        <div className=' w-[11vw] h-[7vh]  overflow-hidden border rounded-xl'>
+                        <div className=' w-[35vw] md:w-[20vw] lg:w-[11vw] h-[7vh]  overflow-hidden border rounded-xl'>
                             <img className='h-full w-full object-cover' src="./playstore.png" alt="" />
                         </div>
-                        <div className=' w-[11vw] h-[7vh] overflow-hidden border rounded-xl'>
+                        <div className=' w-[35vw] md:w-[20vw]  lg:w-[11vw] h-[7vh] overflow-hidden border rounded-xl'>
                             <img className='h-full w-full object-cover' src="./applestore.png" alt="" />
                         </div>
                 </div>

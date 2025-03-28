@@ -11,8 +11,8 @@ const Hero = () => {
           {/* Content inside Hero with backdrop blur */}
           <div className="relative   w-full text-white">
             {/* Main Title Section */}
-            <div className="absolute top-50 flex justify-center flex-col items-center  w-full">
-              <h1 className="md:text-6xl text-3xl font-Montserrat">
+            <div className="absolute lg:top-50 top-30  flex justify-center flex-col items-center  w-full">
+              <h1 className="xl:text-6xl text-3xl font-Montserrat">
                 <span className="text-blue-600 font-bold">Textile</span>Voice
               </h1>
               <h2 className="mt-4 md:text-xl text-[3vw] font-Montserrat">
@@ -58,9 +58,9 @@ const Hero = () => {
                   <button className="border-3 font-bold md:text-2xl text-white rounded-md px-15 py-1">
                     Sign In
                   </button>
-                  <button className="border-3 font-bold flex justify-center items-center md:text-2xl text-white rounded-md px-15 py-1">
+                  <Link href="/Signup" className="border-3 font-bold flex justify-center items-center md:text-2xl text-white rounded-md px-15 py-1">
                     Sign Up
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
