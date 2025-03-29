@@ -79,7 +79,7 @@ const Signin = () => {
           </form>
 
           <div className="mt-6 text-center text-sm text-gray-600">
-            Don't have an account?{" "}
+            Dont have an account?{" "}
             <a
               href="/signup"
               className="text-[#007BFF] hover:text-indigo-500 font-medium"
