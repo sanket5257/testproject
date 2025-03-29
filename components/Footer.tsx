@@ -16,12 +16,18 @@ const Footer = () => {
 
   return (
     <div className='w-full overflow-x-hidden text-white font-Montserrat bg-[#161616]'>
-      <div className='p-10 flex flex-wrap gap-12 justify-evenly items-start'>
+      <div className='p-6 flex flex-wrap gap-12 justify-evenly items-start'>
         <div className='flex flex-col justify-between items-center gap-4'>
         <h1 className="text-[4vw] md:text-[1.5vw] text-white font-Montserrat font-light">
             <span className="text-blue-600 font-medium">Textile</span>Voice
           </h1>
           <h1>Contact with us</h1>
+          <div className='flex gap-1'>
+            <img className='size-8' src="./instaicon.png" alt="" />
+            <img  className='size-7'src="./whatsappicon.png" alt="" />
+            <img className='size-7' src="./facebookicon.png" alt="" />
+            <img  className='size-7'src="./linkedinicon2.png" alt="" />
+          </div>
         </div>
 
         <div className='flex flex-col justify-center items-start gap-1'>

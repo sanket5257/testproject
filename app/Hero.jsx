@@ -1,8 +1,13 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Link from "next/link";
+import Signin from "@/components/Signin";
 
 const Hero = () => {
+  const [showModel, setShowModel] = useState(false);
+ 
+
   return (
     <div className="h-screen w-full relative "> {/* Added overflow-x-hidden */}
       <Header />
@@ -24,7 +29,7 @@ const Hero = () => {
 
               <div
               id="login"
-              className=" pt-10 md:pt-20  flex flex-wrap gap-4  md:justify-evenly justify-center items-center w-full"
+              className=" pt-10 md:pt-20 p-4  flex flex-wrap gap-4  md:justify-evenly justify-center items-center w-full"
             >
               {/* Student Login */}
               <div
@@ -36,7 +41,7 @@ const Hero = () => {
                   Looking for a Job?
                 </h2>
                 <div className="flex pb-4 md:pb-0 gap-6 opacity-100 px-4">
-                  <button className="border-3 font-bold md:text-2xl text-white rounded-md px-15 py-1">
+                <button onClick={() => setShowModel(true)} className="border-3 font-bold flex justify-center items-center md:text-2xl text-white rounded-md px-15 py-1">
                     Sign In
                   </button>
                   <Link href="/Signup" className="border-3 font-bold flex justify-center items-center md:text-2xl text-white rounded-md px-15 py-1">
@@ -71,6 +76,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
+     {/* Render Signin Modal */}
+     {showModel && <Signin Close={()=>{setShowModel(false)}}  />}
     </div>
   );
 };

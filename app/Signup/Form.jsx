@@ -1,7 +1,16 @@
+"use client"
+
 import React from 'react'
 import Header from '../../components/Header'
 
 const Form = () => {
+const handleonsubmit=(e)=>{
+  e.preventDefault();
+  const data=e
+  console.log(data.target.value)
+  
+}
+
   return (
     <div className=' w-full font-Montserrat text-lg'>
       <Header/>
@@ -12,7 +21,7 @@ const Form = () => {
 		<img src="./signupbg.jpeg" alt="" />
 	</div> 
 	<div className="flex md:w-1/2 justify-center md:px-20 px-4 items-center bg-white">
-    <form method='post' className="bg-white ">
+    <form method='post' onSubmit={handleonsubmit} className="bg-white ">
   <h1 className="font-bold text-center font-Montserrat md:text-3xl text-xl text-blue-800 mb-1">Employee Register</h1>
   
   {/* Full Name Fields */}

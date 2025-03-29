@@ -72,6 +72,8 @@ const JobCardSkillBased = () => {
           <h1 className="pt-10 text-center md:text-3xl font-Montserrat font-bold text-blue-500">
             Jobs Based On Your Applies
           </h1>
+          <h3 className='float-right pr-10 '>See All &#x27A4;</h3>
+
           <div className="flex pt-6 flex-nowrap overflow-x-auto w-full md:justify-start pl-10 gap-5 items-center">
             {jobs.map((job, index) => {
               return (

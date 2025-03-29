@@ -1,27 +1,29 @@
 "use client";
 
 import React, { useState } from "react";
-
-
+import Signin from "./Signin";
 
 const Header = () => {
   // State to toggle mobile navigation visibility
   const [isNavVisible, setIsNavVisible] = useState(false);
+  const [showModel, setShowModel] = useState(false);
+
+  const closeSignin = () => {
+    setIsOpen(false);
+  };
 
   // Toggle navigation visibility
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
   };
 
+
   return (
-    <div className="bg-white w-full z-50 absolute text-black">
+    <div   className="bg-white w-full z-50 absolute text-black">
       <div className="h-[10vh] bg-white w-full flex justify-between items-center px-5 md:px-10">
         {/* Logo */}
         <div className="h-full flex items-center justify-start w-1/3">
-          {/* <h1 className="text-[4vw] md:text-[2vw] text-black font-Montserrat font-light">
-            <span className="text-blue-600 font-medium">Textile</span>Voice
-          </h1> */}
-          <div className="h-full ">
+          <div className="h-full p-2">
             <img className="h-full w-full object-cover p-4" src="./logo.jpg" alt="" />
           </div>
         </div>
@@ -46,21 +48,18 @@ const Header = () => {
 
         {/* Right section (sign up, sign in, and phone number) */}
         <div className="hidden lg:flex items-center justify-end gap-3 w-1/3">
-          {/* For small screens: Phone number */}
-          
-
-          {/* Sign up and sign in buttons */}
-          <div className="hidden lg:flex gap-3 items-center">
-            <div className="hidden lg:block text-black">
-            <a href="">999999999</a>
+          <div className="hidden lg:block text-black">
+            <a href="">8308463462 </a>
           </div>
-            <button className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md md:h-9 md:w-24">
-              Sign Up
-            </button>
-            <button className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md md:h-9 md:w-24">
-              Sign In
-            </button>
-          </div>
+          <button
+            onClick={() => setShowModel(true)}
+            className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md md:h-9 md:w-24"
+          >
+            Sign In
+          </button>
+          <button className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md md:h-9 md:w-24">
+            Sign Up
+          </button>
         </div>
       </div>
 
@@ -81,6 +80,9 @@ const Header = () => {
           </div>
         </div>
       )}
+
+      {/* Render Signin Modal */}
+      {showModel && <Signin Close={showModel}/>}
     </div>
   );
 };
