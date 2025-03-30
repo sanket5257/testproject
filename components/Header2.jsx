@@ -30,11 +30,11 @@ const Header2 = () => {
         </div>
 
         {/* Navigation (for md and above) */}
-        <div className="hidden lg:flex lg:text-sm justify-evenly items-center w-1/3">
-          <h1>Home</h1>
-          <h1>Article & Blog</h1>
-          <h1>Community</h1>
-          <h1>Exhibitions</h1>
+        <div className="hidden lg:flex text-blac lg:text-sm justify-evenly items-center w-1/3">
+          <h1 className="text-black">Home</h1>
+          <h1 className="text-black">Article & Blog</h1>
+          <h1 className="text-black">Community</h1>
+          <h1 className="text-black">Exhibitions</h1>
         </div>
 
         {/* Right section (sign up, sign in, and phone number) */}
