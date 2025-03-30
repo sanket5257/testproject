@@ -1,6 +1,5 @@
 "use client";
 import EmployerHeader2 from "@/components/EmployerHeader2";
-import Header2 from "@/components/Header2";
 import React, { useState } from "react";
 
 const Page = () => {
