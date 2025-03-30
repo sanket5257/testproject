@@ -26,7 +26,7 @@ const page = () => {
 
   {/* whatsapp number*/}
   <div className=" mb-2  font-Montserrat">
-    <label htmlFor="whatsapp number" className="text-black text-lg font-medium">what's app number</label>
+    <label htmlFor="whatsapp number" className="text-black text-lg font-medium">whats app number</label>
     <input
         className="border-2 border-gray-400 mt-1 py-2 px-3 rounded-xl w-full text-black"
         type="text"
