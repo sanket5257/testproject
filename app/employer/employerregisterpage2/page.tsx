@@ -135,7 +135,27 @@ const page = () => {
         placeholder="Enter link here"
       />
   </div>
-  <div className='flex justify-center items-center h-[10vh]'>
+  
+
+    </div>
+    <div>
+    <div className=" mb-2 font-Montserrat">
+    <label htmlFor="password" className="text-black text-lg font-medium">Pin code</label>
+    <input
+        className="border-2 border-gray-400 mt-1 py-13 text-center rounded-xl w-full text-black"
+        type="img"
+        id="logo"
+        placeholder="Upload LOGO"
+      />
+  </div>
+  
+  
+    </div>
+    
+
+</div>
+<div className='flex justify-center items-center gap-4'>
+<div className='flex justify-center items-center h-[10vh]'>
   <a
    href='/employer/employerregisterpage1'
     className="bg-white text-[#004C99] flex items-center justify-center border border-[#004C99] rounded-md font-bold  md:h-11 h-15 w-[40vw] md:w-[20vw]"
@@ -143,20 +163,7 @@ const page = () => {
    Previous
   </a>
   </div>
-
-    </div>
-    <div>
-    <div className=" mb-2 font-Montserrat">
-    <label htmlFor="password" className="text-black text-lg font-medium">Pin code</label>
-    <input
-        className="border-2 border-gray-400 mt-1 h-[16.5vh] text-center rounded-xl w-full text-black"
-        type="number"
-        id="Pin code"
-        placeholder="Upload LOGO"
-      />
-  </div>
-  
-  <div className='flex justify-center items-center h-[10vh]'>
+<div className='flex justify-center items-center h-[10vh]'>
   <button
     type="submit"
     className="bg-linear-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md font-bold  md:h-11 h-15 w-[40vw] md:w-[20vw]"
@@ -164,9 +171,6 @@ const page = () => {
     Register now
   </button>
   </div>
-    </div>
-    
-
 </div>
   {/* Forgot Password Link */}
 </form>
