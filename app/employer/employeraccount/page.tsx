@@ -50,7 +50,7 @@ const Page = () => {
           </div>
           <div id="about" className='text-gray-500 md:px-10 px-4 pt-4'>
             <h1 className='text-start text-xl text-black font-bold'>About</h1>
-            <p className='md:text-lg'> I'm John Doe, a dedicated professional from Kolhapur with a strong interest in [insert field or industry]. I am eager to apply my skills in [specific job/role] and contribute to a dynamic team. With a keen eye for detail and excellent problem-solving abilities.</p>
+            <p className='md:text-lg'> Im John Doe, a dedicated professional from Kolhapur with a strong interest in [insert field or industry]. I am eager to apply my skills in [specific job/role] and contribute to a dynamic team. With a keen eye for detail and excellent problem-solving abilities.</p>
             
           </div>
         </div>
