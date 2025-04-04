@@ -24,12 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
       <head>
         <meta name="robots" content="noindex" />
-
-      </head>
-
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

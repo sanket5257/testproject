@@ -66,7 +66,7 @@ const StudentCard = () => {
         Students Placed Highest Packages
         </h1>
 
-        <div className=" md:h-[60vh] h-[30vh] w-full overflow-x-auto flex justify-start pl-4 items-center  gap-4  rounded-xl">
+        <div className=" md:h-[60vh] h-[30vh] w-full no-scrollbar overflow-x-auto flex justify-start pl-4 items-center  gap-4  rounded-xl">
         
           {student.map((student,index)=>{
             return (
