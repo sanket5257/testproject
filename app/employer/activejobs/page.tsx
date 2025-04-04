@@ -3,7 +3,6 @@ import EmployerHeader3 from "@/components/EmployerHeader3";
 import React, { useState } from "react";
 
 const Page = () => {
-  const [filters, setFilters] = useState({ jobType: "", location: "", sortBy: "new" });
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   // Example job data
@@ -35,11 +34,7 @@ const Page = () => {
   ];
 
   // Sorting logic
-  const sortedJobs = [...appliedJobs].sort((a, b) => {
-    if (filters.sortBy === "a-z") return a.title.localeCompare(b.title);
-    if (filters.sortBy === "z-a") return b.title.localeCompare(a.title);
-    return 0;
-  });
+  
 
   return (
     <>
