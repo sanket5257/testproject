@@ -79,9 +79,9 @@ const Page = () => {
         <div className="w-full md:w-3/4 md:p-18 p-6">
           
           <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
-            {appliedJobs.map( () =>{
+            {appliedJobs.map( (val,index) =>{
                 return(
-                    <div className="border border-[#D9D9D9] rounded-2xl shadow-xl p-4">
+                    <div key={index} className="border border-[#D9D9D9] rounded-2xl shadow-xl p-4">
                     <div className="bg-blue-100  p-4 rounded-xl">
                         <div className="flex justify-between pb-2 ">
                         <h1 className='text-black font-bold text-xl pl-25'>Senior product manager</h1>
