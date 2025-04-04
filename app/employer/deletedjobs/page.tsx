@@ -79,7 +79,7 @@ const Page = () => {
         <div className="w-full md:w-3/4 md:p-18 p-6">
           
           <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
-            {appliedJobs.map( (id,index) =>{
+            {appliedJobs.map( (val,index) =>{
                 return(
                     <div key={index} className="border border-[#D9D9D9] rounded-2xl shadow-xl p-4">
                     <div className="bg-[#D9D9D9]  p-4 rounded-xl">
