@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "./components/Header";
 import Signin from "./components/Signin";
 
 const Hero = () => {
@@ -12,7 +11,6 @@ const Hero = () => {
     <div className="h-screen w-full relative ">
       {" "}
       {/* Added overflow-x-hidden */}
-      <Header />
       <div className="h-screen relative w-full overflow-hidden bg-cover bg-center bg-[url(/page1bg.jpeg)] backdrop-blur-3xl">
         <div className="w-full bg-opacity-50 backdrop-blur-sm">
           {/* Content inside Hero with backdrop blur */}
@@ -44,8 +42,6 @@ const Hero = () => {
                     alt="Student Icon"
                     width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                   />
                   <h2 className="font-Montserrat font-bold text-2xl">
                     Looking for a Job?
@@ -77,8 +73,6 @@ const Hero = () => {
                     alt="HR Icon"
                     width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                   />
                   <h2 className="font-Montserrat font-bold text-2xl opacity-100">
                     Looking to Hire?

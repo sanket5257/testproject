@@ -26,8 +26,6 @@ const Cities = () => {
                     src={`./${city}.jpeg`}
                     width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                     alt="company logo"
                   />
                   <h1 className="font-Montserrat text-[2.5vw] md:text-xl text-black font-bold pt-4">

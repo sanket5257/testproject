@@ -25,26 +25,18 @@ const Footer = () => {
             <Image className="size-8" src="./instaicon.png" alt="" 
             width={0}
             height={0}
-            fill // Automatically adjusts to parent width and height
-            style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <Image className="size-7" src="./whatsappicon.png" alt="" 
             width={0}
             height={0}
-            fill // Automatically adjusts to parent width and height
-            style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <Image className="size-7" src="./facebookicon.png" alt="" 
             width={0}
             height={0}
-            fill // Automatically adjusts to parent width and height
-            style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <Image className="size-7" src="./linkedinicon2.png" alt="" 
             width={0}
             height={0}
-            fill // Automatically adjusts to parent width and height
-            style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
           </div>
         </div>
@@ -86,8 +78,7 @@ const Footer = () => {
                 alt=""
                 width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
+              // Adjusts how the image scales
               />
             </div>
             <div className=" w-[35vw] md:w-[20vw]  lg:w-[11vw] h-[7vh] overflow-hidden border rounded-xl">
@@ -97,8 +88,6 @@ const Footer = () => {
                 alt=""
                 width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
             </div>
           </div>

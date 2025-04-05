@@ -54,8 +54,6 @@ const Page1 = () => {
                 <Image
                 width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                   key={index}
                   className="md:size-50 size-16 "
                   src="./apple.png"

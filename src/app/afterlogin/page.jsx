@@ -4,7 +4,6 @@ import JobCard from "../components/JobCard";
 import TopCompanyBox from "../components/TopCompanyBox";
 import JobCardSkillBased from "../components/JobCardSkillBased";
 import Cities from "../components/Cities";
-import Footer from "../components/Footer";
 
 const Page = () => {
   return (
@@ -67,7 +66,6 @@ const Page = () => {
         </div>
       </div>
 
-      <Footer />
     </div>
   );
 };

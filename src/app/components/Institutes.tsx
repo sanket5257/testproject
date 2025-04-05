@@ -27,8 +27,6 @@ const Institutes = () => {
                     alt="company logo"
                     width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                   />
                   <h1 className="font-Montserrat text-black text-[2.5vw] md:text-xl font-bold pt-4">
                     {institute}

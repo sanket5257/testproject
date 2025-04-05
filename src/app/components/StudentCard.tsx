@@ -71,8 +71,6 @@ const StudentCard = () => {
                   alt={student.name}
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
 
                 <div

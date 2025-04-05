@@ -1,6 +1,5 @@
 import React from "react";
 import Institutes from "./components/Institutes";
-import Footer from "./components/Footer";
 
 const Page3 = () => {
   return (
@@ -32,7 +31,6 @@ const Page3 = () => {
       </div>
 
       <Institutes />
-      <Footer />
     </div>
   );
 };
