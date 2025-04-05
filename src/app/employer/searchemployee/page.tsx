@@ -213,6 +213,10 @@ const Page = () => {
               className="md:hidden size-8 border p-1.5 rounded "
               onClick={() => setIsFilterOpen(true)}
               alt="Filter"
+              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
           </div>
 
@@ -230,6 +234,10 @@ const Page = () => {
                           className="size-8"
                           src="../account.png"
                           alt="company logo"
+                          width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                         />
                         <p className="text-sm text-[#004C99] mt-2">
                           {job.employee}
@@ -241,6 +249,10 @@ const Page = () => {
                             className="size-7"
                             src="../save.svg"
                             alt="save"
+                            width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                           />
                         </div>
                       </div>

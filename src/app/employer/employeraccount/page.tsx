@@ -15,6 +15,10 @@ const Page = () => {
                 className="md:size-36 size-10 "
                 src="../employerimg/employeraccount.jpeg"
                 alt=""
+                width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
             </div>
             <div>
@@ -33,6 +37,10 @@ const Page = () => {
               className="size-7 mb-4 ml-[12vw]"
               src="../accountimg/eyeborw.png"
               alt=""
+              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
           </div>
           <div className="flex pt-10 gap-8">
@@ -42,6 +50,10 @@ const Page = () => {
                   className="size-5"
                   src="../accountimg/location.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>Kolhapur</h3>
               </div>
@@ -50,6 +62,10 @@ const Page = () => {
                   className="size-5"
                   src="../accountimg/gender.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>johndoe@gmail.com</h3>
               </div>
@@ -58,6 +74,10 @@ const Page = () => {
                   className="size-5"
                   src="../accountimg/agegroup.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>+91 00000 00000</h3>
               </div>
@@ -69,6 +89,10 @@ const Page = () => {
                   className="size-5"
                   src="../accountimg/email.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>416 115</h3>
               </div>
@@ -77,6 +101,10 @@ const Page = () => {
                   className="size-5"
                   src="../accountimg/whatsapp.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>10340 02300</h3>
               </div>
@@ -85,6 +113,10 @@ const Page = () => {
                   className="size-5"
                   src="../accountimg/construction.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>www.textilevoice.com</h3>
               </div>

@@ -123,6 +123,10 @@ const Page = () => {
               className="md:hidden size-8 border p-1.5 rounded mb-4"
               onClick={() => setIsFilterOpen(true)}
               alt="Filter"
+              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <h2 className="text-4xl font-bold mb-4">My Applications</h2>
           </div>
@@ -140,6 +144,10 @@ const Page = () => {
                     className="size-20 p-4"
                     src={job.companylogo}
                     alt={job.company}
+                    width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                   />
                   <div>
                     <h3 className="text-xl font-semibold">{job.title}</h3>

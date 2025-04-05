@@ -7,7 +7,12 @@ const page = () => {
     <div className=" w-full font-Montserrat text-lg">
       <div className=" bg-white md:flex md:pt-[15vh] pt-[10vh]">
         <div className="relative overflow-hidden md:flex md:w-1/2 bg-white justify-around items-center">
-          <Image src="../employerimg/signupbg.jpeg" alt="" />
+          <Image src="../employerimg/signupbg.jpeg" alt="" 
+          width={0}
+          height={0}
+          fill // Automatically adjusts to parent width and height
+          style={{ objectFit: "contain" }} // Adjusts how the image scales
+          />
         </div>
         <div className="flex md:w-1/2 justify-center md:px-20 px-4 items-center bg-white">
           <form method="post" className="bg-white ">

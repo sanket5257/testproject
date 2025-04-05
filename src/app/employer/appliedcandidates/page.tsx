@@ -72,7 +72,12 @@ const Page = () => {
           </div>
           <div className="flex text-md justify-between border w-full  text-[#004C99] rounded-lg px-3 py-4 cursor-pointer ">
             <div className="flex justify-center items-center">
-              <Image className="size-5" src="../employerimg/flash.svg" alt="" />
+              <Image className="size-5" src="../employerimg/flash.svg" alt="" 
+              width={0}
+              height={0}
+              fill // Automatically adjusts to parent width and height
+              style={{ objectFit: "contain" }} // Adjusts how the image scales
+              />
               <h1 className="pl-2 font-bold">Easy Apply</h1>
             </div>
 
@@ -84,6 +89,10 @@ const Page = () => {
                 className="size-5"
                 src="../employerimg/whatsappicon.png"
                 alt=""
+                width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
               <h1 className="pl-2 font-bold">Whatsapp</h1>
             </div>

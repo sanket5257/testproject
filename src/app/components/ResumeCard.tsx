@@ -29,7 +29,12 @@ const ResumeCard = () => {
           key={index}
           className="flex justify-evenly items-center border border-[#004C99] bg-[#D9EBFF] rounded-lg md:w-[31.5vw] w-[90vw] h-[15vh]"
         >
-          <Image src={resume.image} alt={resume.name} className="size-20" />
+          <Image src={resume.image} alt={resume.name} className="size-20" 
+          width={0}
+          height={0}
+          fill // Automatically adjusts to parent width and height
+          style={{ objectFit: "contain" }} // Adjusts how the image scales
+          />
           <div>
             <h3 className="text-2xl mb-2 text-[#004C99] font-semibold">
               {resume.name}
@@ -44,7 +49,12 @@ const ResumeCard = () => {
                 </h3>
               </div>
               <div className="bg-red-50 ">
-                <Image className="size-6" src="./accountimg/plus.svg" alt="" />
+                <Image className="size-6" src="./accountimg/plus.svg" alt="" 
+                width={0}
+                height={0}
+                fill // Automatically adjusts to parent width and height
+                style={{ objectFit: "contain" }} // Adjusts how the image scales
+                />
               </div>
             </div>
           </div>

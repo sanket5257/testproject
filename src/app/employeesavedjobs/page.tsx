@@ -101,6 +101,10 @@ const Page = () => {
               src="./filter.png"
               alt={"filter"}
               className="md:hidden size-8 border p-1.5 mr-2 rounded mb-4"
+              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               onClick={() => setIsFilterOpen(true)}
             ></Image>
             <h2 className="text-4xl font-bold mb-4 font-Montserrat">
@@ -117,7 +121,12 @@ const Page = () => {
                 className="p-4 flex justify-between items-center bg-[#F7FAFA] border shadow-lg rounded-lg"
               >
                 <div className="flex items-center justify-center">
-                  <Image className="size-20 p-4" src={job.companylogo} alt="" />
+                  <Image className="size-20 p-4" src={job.companylogo} alt="" 
+                  width={0}
+                  height={0}
+                  fill // Automatically adjusts to parent width and height
+                  style={{ objectFit: "contain" }} // Adjusts how the image scales
+                  />
                   <div>
                     <h3 className="text-xl font-semibold">{job.title}</h3>
                     <p className="text-[#4F7594]">{job.expireddate}</p>

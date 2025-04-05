@@ -95,6 +95,10 @@ const Page = () => {
                         className="size-7 "
                         src="../accountimg/eyeborw.png"
                         alt=""
+                        width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                       />
                     </div>
                     <div>
@@ -104,6 +108,10 @@ const Page = () => {
                             className="md:size-22 size-10 "
                             src="../employerimg/employeraccount.jpeg"
                             alt=""
+                            width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                           />
                         </div>
                         <div className="text-sm">
@@ -112,6 +120,10 @@ const Page = () => {
                               className="size-5"
                               src="../employerimg/rupee.svg"
                               alt=""
+                              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                             />
                             <h3>Salary : $1.5 K - $1.8 K </h3>
                           </div>
@@ -120,6 +132,10 @@ const Page = () => {
                               className="size-5"
                               src="../employerimg/job.svg"
                               alt=""
+                              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                             />
                             <h3>Job Type : Onsite</h3>
                           </div>
@@ -128,6 +144,10 @@ const Page = () => {
                               className="size-5"
                               src="../employerimg/location.svg"
                               alt=""
+                              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                             />
                             <h3>Location : Pune, Maharashtra</h3>
                           </div>
@@ -138,6 +158,10 @@ const Page = () => {
                               className="size-5"
                               src="../employerimg/job.svg"
                               alt=""
+                              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                             />
                             <h3>Experience : 0-1 year </h3>
                           </div>
@@ -146,6 +170,10 @@ const Page = () => {
                               className="size-5"
                               src="../employerimg/user.svg"
                               alt=""
+                              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                             />
                             <h3>No. of Opening : 10</h3>
                           </div>
@@ -154,6 +182,10 @@ const Page = () => {
                               className="size-5"
                               src="../employerimg/time.svg"
                               alt=""
+                              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                             />
                             <h3>Working Time : 11:00 AM to 06:00 PM</h3>
                           </div>

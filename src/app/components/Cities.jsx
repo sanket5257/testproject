@@ -24,8 +24,10 @@ const Cities = () => {
                   <Image
                     className="size-30 md:size-50 rounded-xl shadow-xl"
                     src={`./${city}.jpeg`}
-                    layout="fill" // This makes the image fill its parent container.
-                    objectFit="contain" // Adjusts how the image fits in the container.
+                    width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                     alt="company logo"
                   />
                   <h1 className="font-Montserrat text-[2.5vw] md:text-xl text-black font-bold pt-4">

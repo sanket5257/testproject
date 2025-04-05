@@ -25,12 +25,20 @@ const EmployerHeader3 = () => {
             className="size-8 cursor-pointer"
             src="../bell.svg"
             alt="Notifications"
+            width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
           />
           <Image
             className="size-8 cursor-pointer"
             src="../user.svg"
             alt="User"
             onClick={() => {}}
+            width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
           />
         </div>
 
@@ -54,11 +62,19 @@ const EmployerHeader3 = () => {
             className="size-12 cursor-pointer py-2"
             src="./bell.svg"
             alt="Notifications"
+            width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
           />
           <Image
             className="size-12 cursor-pointer py-2"
             src="./user.svg"
             alt="User"
+            width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             onClick={() => {}}
           />
         </div>

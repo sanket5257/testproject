@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const TopCompanyBox = () => {
   const company = [
@@ -27,6 +28,10 @@ const TopCompanyBox = () => {
                   className="md:size-50 size-16 "
                   src="./apple.png"
                   alt="company logo"
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
               );
             })}

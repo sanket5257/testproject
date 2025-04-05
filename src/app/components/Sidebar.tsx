@@ -13,6 +13,10 @@ const Sidebar = () => {
             className="opacity-60  size-30 "
             src="./account.png"
             alt="img"
+            width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
           />
         </div>
         <div className="flex flex-col justify-center items-center gap-2">

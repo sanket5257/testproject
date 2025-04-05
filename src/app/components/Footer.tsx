@@ -22,10 +22,30 @@ const Footer = () => {
           </h1>
           <h1>Contact with us</h1>
           <div className="flex gap-1">
-            <Image className="size-8" src="./instaicon.png" alt="" />
-            <Image className="size-7" src="./whatsappicon.png" alt="" />
-            <Image className="size-7" src="./facebookicon.png" alt="" />
-            <Image className="size-7" src="./linkedinicon2.png" alt="" />
+            <Image className="size-8" src="./instaicon.png" alt="" 
+            width={0}
+            height={0}
+            fill // Automatically adjusts to parent width and height
+            style={{ objectFit: "contain" }} // Adjusts how the image scales
+            />
+            <Image className="size-7" src="./whatsappicon.png" alt="" 
+            width={0}
+            height={0}
+            fill // Automatically adjusts to parent width and height
+            style={{ objectFit: "contain" }} // Adjusts how the image scales
+            />
+            <Image className="size-7" src="./facebookicon.png" alt="" 
+            width={0}
+            height={0}
+            fill // Automatically adjusts to parent width and height
+            style={{ objectFit: "contain" }} // Adjusts how the image scales
+            />
+            <Image className="size-7" src="./linkedinicon2.png" alt="" 
+            width={0}
+            height={0}
+            fill // Automatically adjusts to parent width and height
+            style={{ objectFit: "contain" }} // Adjusts how the image scales
+            />
           </div>
         </div>
 
@@ -64,6 +84,10 @@ const Footer = () => {
                 className="h-full w-full object-cover"
                 src="./playstore.png"
                 alt=""
+                width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
             </div>
             <div className=" w-[35vw] md:w-[20vw]  lg:w-[11vw] h-[7vh] overflow-hidden border rounded-xl">
@@ -71,6 +95,10 @@ const Footer = () => {
                 className="h-full w-full object-cover"
                 src="./applestore.png"
                 alt=""
+                width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
             </div>
           </div>

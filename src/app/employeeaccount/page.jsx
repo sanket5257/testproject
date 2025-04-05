@@ -18,6 +18,10 @@ const Page = () => {
               className="md:size-36 size-10 opacity-60"
               src="./account.png"
               alt=""
+              width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <div>
               <h1 className="text-black font-bold text-xl mb-4">John Doe</h1>
@@ -26,6 +30,10 @@ const Page = () => {
                   className="size-5"
                   src="./accountimg/location.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>Kolhapur</h3>
               </div>
@@ -34,6 +42,10 @@ const Page = () => {
                   className="size-5"
                   src="./accountimg/gender.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>Male</h3>
               </div>
@@ -42,6 +54,10 @@ const Page = () => {
                   className="size-5"
                   src="./accountimg/agegroup.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>22</h3>
               </div>
@@ -51,9 +67,18 @@ const Page = () => {
                 className="size-7 mb-4 ml-[12vw]"
                 src="./accountimg/eyeborw.png"
                 alt=""
+                width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
               <div className="flex gap-2 pb-1">
-                <Image className="size-5" src="./accountimg/email.png" alt="" />
+                <Image className="size-5" src="./accountimg/email.png" alt="" 
+                width={0}
+                height={0}
+                fill // Automatically adjusts to parent width and height
+                style={{ objectFit: "contain" }} // Adjusts how the image scales
+                />
                 <h3>johndoe@gmail.com</h3>
               </div>
               <div className="flex gap-2 pb-1">
@@ -61,6 +86,10 @@ const Page = () => {
                   className="size-5"
                   src="./accountimg/whatsapp.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>+91 00000 00000</h3>
               </div>
@@ -69,6 +98,10 @@ const Page = () => {
                   className="size-5"
                   src="./accountimg/construction.png"
                   alt=""
+                  width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>Job seeker</h3>
               </div>
@@ -100,6 +133,10 @@ const Page = () => {
                 className="object-cover h-full w-full"
                 src="./accountimg/ai.jpeg"
                 alt=""
+                width={0}
+                    height={0}
+                    fill // Automatically adjusts to parent width and height
+                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
               <h1 className="text-white text-3xl font-bold absolute bottom-15 px-10">
                 BUILD YOUR RESUME WITH TEXTILE VOICE
@@ -113,7 +150,12 @@ const Page = () => {
           id="sidebar"
           className="relative h-full ml-2 bg-white w-[28vw] hidden md:block"
         >
-          <Image className="pt-10" src="./account.jpeg" alt="img" />
+          <Image className="pt-10" src="./account.jpeg" alt="img" 
+          width={0}
+          height={0}
+          fill // Automatically adjusts to parent width and height
+          style={{ objectFit: "contain" }} // Adjusts how the image scales
+          />
           <ul className="pl-10 list-disc">
             <li className="pb-4">Complete your profile to get noticed!</li>
             <li className="pb-4">Fill in details for better job matches.</li>

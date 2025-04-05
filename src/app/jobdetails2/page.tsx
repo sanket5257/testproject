@@ -25,7 +25,12 @@ const page = () => {
               className="p-4 flex justify-between md:w-[70vw] items-center bg-[#F7FAFA] border shadow-lg rounded-lg"
             >
               <div className="flex items-center justify-center">
-                <Image className="size-20 p-4" src={job.companylogo} alt="" />
+                <Image className="size-20 p-4" src={job.companylogo} alt="" 
+                width={0}
+                height={0}
+                fill // Automatically adjusts to parent width and height
+                style={{ objectFit: "contain" }} // Adjusts how the image scales
+                />
                 <div>
                   <h3 className="text-xl text-[#004C99] font-semibold">
                     {job.title}

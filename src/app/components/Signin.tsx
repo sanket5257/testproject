@@ -16,7 +16,12 @@ const Signin = () => {
 
           <div className="flex py-10  items-center justify-center ">
             <button className="px-24  py-2.5 border flex gap-2 border-slate-200 dark:border-slate-700 rounded-lg  text-black">
-              <Image className="size-6" src="./google.svg" alt="" />
+              <Image className="size-6" src="./google.svg" alt="" 
+              width={0}
+              height={0}
+              fill // Automatically adjusts to parent width and height
+              style={{ objectFit: "contain" }} // Adjusts how the image scales
+              />
               Login with Google
             </button>
           </div>
