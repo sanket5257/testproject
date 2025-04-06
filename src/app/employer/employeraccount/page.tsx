@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Page = () => {
   return (
-    <div className="bg-white min-h-screen text-black w-full font-Montserrat">
+    <div className="bg-white min-h-screen pb-10 text-black w-full font-Montserrat">
       <EmployerHeader3 />
       <div className="flex bg-white pt-20 sm:pt-16 items-center justify-center">
         <div className="min-h-screen md:px-20 md:w-[70vw] w-full shadow-2xl">
@@ -13,7 +13,7 @@ const Page = () => {
             <div className="rounded-full overflow-hidden">
               <Image
                 className="md:size-36 size-10 "
-                src="../employerimg/employeraccount.jpeg"
+                src="/employerimg/employeraccount.jpeg"
                 alt=""
                 width={0}
                     height={0}
@@ -33,7 +33,7 @@ const Page = () => {
 
             <Image
               className="size-7 mb-4 ml-[12vw]"
-              src="../accountimg/eyeborw.png"
+              src="/accountimg/eyeborw.png"
               alt=""
               width={0}
                     height={0}
@@ -44,7 +44,7 @@ const Page = () => {
               <div className="flex gap-2 pb-2">
                 <Image
                   className="size-5"
-                  src="../accountimg/location.png"
+                  src="/accountimg/location.png"
                   alt=""
                   width={0}
                     height={0}
@@ -54,7 +54,7 @@ const Page = () => {
               <div className="flex gap-2 pb-2">
                 <Image
                   className="size-5"
-                  src="../accountimg/gender.png"
+                  src="/accountimg/gender.png"
                   alt=""
                   width={0}
                     height={0}
@@ -64,7 +64,7 @@ const Page = () => {
               <div className="flex gap-2 pb-2">
                 <Image
                   className="size-5"
-                  src="../accountimg/agegroup.png"
+                  src="/accountimg/agegroup.png"
                   alt=""
                   width={0}
                     height={0}
@@ -77,7 +77,7 @@ const Page = () => {
               <div className="flex gap-2 pb-2">
                 <Image
                   className="size-5"
-                  src="../accountimg/email.png"
+                  src="/accountimg/email.png"
                   alt=""
                   width={0}
                     height={0}
@@ -87,7 +87,7 @@ const Page = () => {
               <div className="flex gap-2 pb-2">
                 <Image
                   className="size-5"
-                  src="../accountimg/whatsapp.png"
+                  src="/accountimg/whatsapp.png"
                   alt=""
                   width={0}
                     height={0}
@@ -97,7 +97,7 @@ const Page = () => {
               <div className="flex gap-2 pb-2">
                 <Image
                   className="size-5"
-                  src="../accountimg/construction.png"
+                  src="/accountimg/construction.png"
                   alt=""
                   width={0}
                     height={0}

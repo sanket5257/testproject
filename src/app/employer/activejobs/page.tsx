@@ -46,7 +46,7 @@ const Page = () => {
         {/* Mobile Button to Open Filter & Sort */}
         {/* Sidebar Filter & Sort (Hidden on Desktop) */}
         <div
-          className={`fixed inset-0 bg-whit flex flex-col gap-4 items-start px-10 pt-10 rounded-2xl bg-white  border shadow-lg transition-transform transform ${
+          className={`fixed inset-0 bg-white flex flex-col gap-4 items-start px-10 pt-10 rounded-2xl h-[100vh]  border shadow-lg transition-transform transform ${
             isFilterOpen ? "translate-x-0" : "-translate-x-full"
           } md:translate-x-10  md:mt-10  md:w-[18vw] md:relative`}
         >
@@ -58,7 +58,7 @@ const Page = () => {
           </button>
 
           {/* Job Type Radio Buttons */}
-          <div className="mb-4 flex flex-col gap-2">
+          <div className="mb-4  flex flex-col gap-2">
             <label className="block font-bold text-lg  text-black">Sort</label>
             <div className="flex gap-2 justify-center items-center flex-col">
               {["New to old", "Old to new", "A-Z", "Z-A"].map((type, index) => (
@@ -93,7 +93,7 @@ const Page = () => {
                       </h1>
                       <Image
                         className="size-7 "
-                        src="../accountimg/eyeborw.png"
+                        src="/accountimg/eyeborw.png"
                         alt=""
                         width={0}
                     height={0}
@@ -104,7 +104,7 @@ const Page = () => {
                         <div className="rounded-full overflow-hidden">
                           <Image
                             className="md:size-22 size-10 "
-                            src="../employerimg/employeraccount.jpeg"
+                            src="/employerimg/employeraccount.jpeg"
                             alt=""
                             width={0}
                     height={0}
@@ -114,7 +114,7 @@ const Page = () => {
                           <div className="flex gap-2 pb-1">
                             <Image
                               className="size-5"
-                              src="../employerimg/rupee.svg"
+                              src="/employerimg/rupee.svg"
                               alt=""
                               width={0}
                     height={0}
@@ -124,7 +124,7 @@ const Page = () => {
                           <div className="flex gap-2 pb-1">
                             <Image
                               className="size-5"
-                              src="../employerimg/job.svg"
+                              src="/employerimg/job.svg"
                               alt=""
                               width={0}
                     height={0}
@@ -134,7 +134,7 @@ const Page = () => {
                           <div className="flex gap-2 pb-1">
                             <Image
                               className="size-5"
-                              src="../employerimg/location.svg"
+                              src="/employerimg/location.svg"
                               alt=""
                               width={0}
                     height={0}
@@ -146,7 +146,7 @@ const Page = () => {
                           <div className="flex gap-2 pb-1">
                             <Image
                               className="size-5"
-                              src="../employerimg/job.svg"
+                              src="/employerimg/job.svg"
                               alt=""
                               width={0}
                     height={0}
@@ -156,7 +156,7 @@ const Page = () => {
                           <div className="flex gap-2 pb-1">
                             <Image
                               className="size-5"
-                              src="../employerimg/user.svg"
+                              src="/employerimg/user.svg"
                               alt=""
                               width={0}
                     height={0}
@@ -166,7 +166,7 @@ const Page = () => {
                           <div className="flex gap-2 pb-1">
                             <Image
                               className="size-5"
-                              src="../employerimg/time.svg"
+                              src="/employerimg/time.svg"
                               alt=""
                               width={0}
                     height={0}
@@ -213,7 +213,7 @@ const Page = () => {
                   <div className="flex justify-between pt-4">
                     <div className="border rounded-lg px-4 py-1 flex gap-3">
                       <Image
-                        src="../employerimg/profile.png"
+                        src="/employerimg/profile.png"
                         className="size-4"
                         alt=""
                         width={0}

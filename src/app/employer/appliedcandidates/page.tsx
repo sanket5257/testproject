@@ -55,7 +55,7 @@ const Page = () => {
   });
 
   return (
-    <div className=" min-h-screen font-Manrope bg-white text-black ">
+    <div className=" min-h-screen pb-10 font-Manrope bg-white text-black ">
       <EmployerHeader3 />
       <div className="flex pt-15 gap-4">
         <div className="w-2/10 h-full p-12 bg-white shadow-2xl flex flex-col justify-start gap-5 items-center">
@@ -72,7 +72,7 @@ const Page = () => {
           </div>
           <div className="flex text-md justify-between border w-full  text-[#004C99] rounded-lg px-3 py-4 cursor-pointer ">
             <div className="flex justify-center items-center">
-              <Image className="size-5" src="../employerimg/flash.svg" alt="" 
+              <Image className="size-5" src="/employerimg/flash.svg" alt="" 
               width={0}
               height={0}
               />
@@ -85,7 +85,7 @@ const Page = () => {
             <div className="flex justify-center items-center">
               <Image
                 className="size-5"
-                src="../employerimg/whatsappicon.png"
+                src="/employerimg/whatsappicon.png"
                 alt=""
                 width={0}
                     height={0}

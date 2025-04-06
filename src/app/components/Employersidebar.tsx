@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Employersidebar = () => {
   return (
-    <div>
+    <div className="bg-white h-screen">
       <div
         id="sidebar"
         className=" h-full ml-2 gap-12 font-Montserrat bg-white md:w-[28vw] w-full absolute right-0 top-10 flex justify-center items-center flex-col"
@@ -12,7 +12,7 @@ const Employersidebar = () => {
           <div className="size-36 rounded-full overflow-hidden">
             <Image
               className="h-full w-full object-cover"
-              src="../employerimg/employeraccount.jpeg"
+              src="/employerimg/employeraccount.jpeg"
               alt=""
               width={0}
                     height={0}
@@ -25,7 +25,7 @@ const Employersidebar = () => {
         </div>
         <div className="flex flex-col font-medium justify-center items-start gap-2">
           <div className="flex gap-2 pb-2">
-            <Image className="size-5" src="../employerimg/user.png" alt="" 
+            <Image className="size-5" src="/employerimg/user.png" alt="" 
             
             width={0}
                     height={0}
@@ -33,14 +33,14 @@ const Employersidebar = () => {
             <h3>Company Profile</h3>
           </div>
           <div className="flex gap-2 pb-2">
-            <Image className="size-5" src="../employerimg/search.png" alt=""
+            <Image className="size-5" src="/employerimg/search.png" alt=""
             width={0}
             height={0}
             />
             <h3>Search Employee</h3>
           </div>
           <div className="flex gap-2 pb-2">
-            <Image className="size-5" src="../employerimg/mobile.png" alt="" 
+            <Image className="size-5" src="/employerimg/mobile.png" alt="" 
             width={0}
             height={0}
             />
@@ -49,7 +49,7 @@ const Employersidebar = () => {
           <div className="flex gap-2 pb-2">
             <Image
               className="size-5"
-              src="../employerimg/independant.png"
+              src="/employerimg/independant.png"
               alt=""
               width={0}
                     height={0}
@@ -57,21 +57,21 @@ const Employersidebar = () => {
             <h3>Active Jobs</h3>
           </div>
           <div className="flex gap-2 pb-2">
-            <Image className="size-5" src="../save.svg" alt="" 
+            <Image className="size-5" src="/save.svg" alt="" 
             width={0}
             height={0}
             />
             <h3>Deleted Jobs</h3>
           </div>
           <div className="flex gap-2 pb-2">
-            <Image className="size-5" src="../employerimg/delete.png" alt="" 
+            <Image className="size-5" src="/employerimg/delete.png" alt="" 
             width={0}
             height={0}
             />
             <h3>Saved Candidate</h3>
           </div>
           <div className="flex gap-2 pb-2">
-            <Image className="size-5" src="../employerimg/pending.png" alt="" 
+            <Image className="size-5" src="/employerimg/pending.png" alt="" 
             width={0}
             height={0}
             />

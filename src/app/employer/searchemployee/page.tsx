@@ -93,7 +93,7 @@ const Page = () => {
         {/* Pass `setIsFilterOpen` as a prop to Header3 */}
         <EmployerHeader2 />
       </div>
-      <div className="flex flex-col font-Montserrat md:flex-row w-full min-h-screen  bg-white text-black">
+      <div className="flex flex-col pb-10 font-Montserrat md:flex-row w-full min-h-screen  bg-white text-black">
         {/* Mobile Button to Open Filter & Sort */}
         {/* Sidebar Filter & Sort (Hidden on Desktop) */}
         <div
@@ -230,7 +230,7 @@ const Page = () => {
                       <div className="flex gap-1">
                         <Image
                           className="size-8"
-                          src="../account.png"
+                          src="/account.png"
                           alt="company logo"
                           width={0}
                     height={0}
@@ -243,7 +243,7 @@ const Page = () => {
                         <div className="bg-white flex justify-center items-center size-8 rounded-full">
                           <Image
                             className="size-7"
-                            src="../save.svg"
+                            src="/save.svg"
                             alt="save"
                             width={0}
                     height={0}
