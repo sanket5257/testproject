@@ -5,19 +5,19 @@ import Image from "next/image";
 const resumeData = [
   {
     name: "Current Industry",
-    image: "./accountimg/textile.png", // Placeholder image URL
+    image: "/accountimg/textile.png", // Placeholder image URL
   },
   {
     name: "Current Industry",
-    image: "./accountimg/textile.png", // Placeholder image URL
+    image: "/accountimg/textile.png", // Placeholder image URL
   },
   {
     name: "Current Industry",
-    image: "./accountimg/textile.png", // Placeholder image URL
+    image: "/accountimg/textile.png", // Placeholder image URL
   },
   {
     name: "Current Industry",
-    image: "./accountimg/textile.png", // Placeholder image URL
+    image: "/accountimg/textile.png", // Placeholder image URL
   },
 ];
 
@@ -32,8 +32,6 @@ const ResumeCard = () => {
           <Image src={resume.image} alt={resume.name} className="size-20" 
           width={0}
           height={0}
-          fill // Automatically adjusts to parent width and height
-          style={{ objectFit: "contain" }} // Adjusts how the image scales
           />
           <div>
             <h3 className="text-2xl mb-2 text-[#004C99] font-semibold">
@@ -49,11 +47,9 @@ const ResumeCard = () => {
                 </h3>
               </div>
               <div className="bg-red-50 ">
-                <Image className="size-6" src="./accountimg/plus.svg" alt="" 
+                <Image className="size-6" src="/accountimg/plus.svg" alt="" 
                 width={0}
                 height={0}
-                fill // Automatically adjusts to parent width and height
-                style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
               </div>
             </div>

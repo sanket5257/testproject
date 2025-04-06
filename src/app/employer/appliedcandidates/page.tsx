@@ -75,8 +75,6 @@ const Page = () => {
               <Image className="size-5" src="../employerimg/flash.svg" alt="" 
               width={0}
               height={0}
-              fill // Automatically adjusts to parent width and height
-              style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
               <h1 className="pl-2 font-bold">Easy Apply</h1>
             </div>
@@ -91,8 +89,6 @@ const Page = () => {
                 alt=""
                 width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
               <h1 className="pl-2 font-bold">Whatsapp</h1>
             </div>

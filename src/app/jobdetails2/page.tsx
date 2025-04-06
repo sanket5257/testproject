@@ -11,11 +11,11 @@ const page = () => {
       company: "Code Labs",
       location: "New York",
       expireddate: "Applied on January 30, 2025",
-      companylogo: "./google.svg",
+      companylogo: "/google.svg",
     },
   ];
   return (
-    <div className="bg-white h-screen font-Montserrat text-black">
+    <div className="bg-white min-h-screen pb-10 font-Montserrat text-black">
       <Header2 />
       <div className="w-full pt-4 h-auto bg-white flex flex-col gap-5 justify-center items-center">
         <div className="h-full md:w-[70vw] w-[90vw]">
@@ -28,8 +28,6 @@ const page = () => {
                 <Image className="size-20 p-4" src={job.companylogo} alt="" 
                 width={0}
                 height={0}
-                fill // Automatically adjusts to parent width and height
-                style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <div>
                   <h3 className="text-xl text-[#004C99] font-semibold">
@@ -83,6 +81,35 @@ const page = () => {
                 opportunities for professional development.
               </h3>
             </div>
+            <div className="flex justify-start gap-4 items-center pt-5">
+            <div className=" text-md bg-[#004C99] border text-white rounded-lg px-3 py-2 cursor-pointer ">
+                        <h1 className="pl-2 font-bold">Apply Now</h1>
+                                  </div>
+                      <div className=" text-md justify-between border  text-[#004C99] rounded-lg px-3 py-2 cursor-pointer ">
+                        <div className="flex  items-center">
+                          <Image className="size-5" src="../employerimg/flash.svg" alt="" 
+                          width={0}
+                          height={0}
+                          />
+                          <h1 className="pl-2 font-bold">Easy Apply</h1>
+                        </div>
+            
+                      </div>
+                      <div className=" text-md border  text-[#33CA0E] rounded-lg px-3 py-2 cursor-pointer ">
+                        <div className="flex items-center">
+                          <Image
+                            className="size-5"
+                            src="../employerimg/whatsappicon.png"
+                            alt=""
+                            width={0}
+                                height={0}
+                          />
+                          <h1 className="pl-2 font-bold">Whatsapp</h1>
+                        </div>
+                      </div>
+            </div>
+            <h3 className="pt-3 text-[#787878]">Spam & Report</h3>
+           
           </div>
           <div className="pt-4 hidden md:block">
             <SimilarJobs />

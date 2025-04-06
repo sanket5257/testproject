@@ -1,63 +1,51 @@
 "use client";
-import React, { useState } from "react";
-import Header3 from "../components/Header3";
+import React from "react";
 import ResumeCard from "../components/ResumeCard";
-import Sidebar from "../components/Sidebar";
 import Image from "next/image";
 
 const Page = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="bg-white text-black w-full font-Montserrat">
-      <Header3 setIsSidebarOpen={setIsSidebarOpen} />
-      <div className="flex bg-white pt-20 sm:pt-16 items-center justify-center">
+    <div className="bg-white min-h-screen pb-10 text-black w-full font-Montserrat">
+      <div className="flex min-h-screen bg-white pt-20 lg:pt-25 sm:pt-16 items-center justify-center">
         <div className="h-full md:w-[70vw] w-full shadow-2xl">
           <div className="md:text-lg text-sm text-gray-500 w-full flex flex-wrap items-center justify-evenly gap-4">
             <Image
               className="md:size-36 size-10 opacity-60"
-              src="./account.png"
+              src="/account.png"
               alt=""
               width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <div>
               <h1 className="text-black font-bold text-xl mb-4">John Doe</h1>
               <div className="flex gap-2 pb-1">
                 <Image
                   className="size-5"
-                  src="./accountimg/location.png"
+                  src="/accountimg/location.png"
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>Kolhapur</h3>
               </div>
               <div className="flex gap-2 pb-1">
                 <Image
                   className="size-5"
-                  src="./accountimg/gender.png"
+                  src="/accountimg/gender.png"
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>Male</h3>
               </div>
               <div className="flex gap-2 pb-1">
                 <Image
                   className="size-5"
-                  src="./accountimg/agegroup.png"
+                  src="/accountimg/agegroup.png"
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>22</h3>
               </div>
@@ -65,43 +53,35 @@ const Page = () => {
             <div>
               <Image
                 className="size-7 mb-4 ml-[12vw]"
-                src="./accountimg/eyeborw.png"
+                src="/accountimg/eyeborw.png"
                 alt=""
                 width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
               <div className="flex gap-2 pb-1">
-                <Image className="size-5" src="./accountimg/email.png" alt="" 
+                <Image className="size-5" src="/accountimg/email.png" alt="" 
                 width={0}
                 height={0}
-                fill // Automatically adjusts to parent width and height
-                style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>johndoe@gmail.com</h3>
               </div>
               <div className="flex gap-2 pb-1">
                 <Image
                   className="size-5"
-                  src="./accountimg/whatsapp.png"
+                  src="/accountimg/whatsapp.png"
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>+91 00000 00000</h3>
               </div>
               <div className="flex gap-2 pb-1">
                 <Image
                   className="size-5"
-                  src="./accountimg/construction.png"
+                  src="/accountimg/construction.png"
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>Job seeker</h3>
               </div>
@@ -131,12 +111,10 @@ const Page = () => {
             <div className="relative hidden md:block bg-red-50 h-[17vh] mt-5 overflow-hidden w-full rounded-2xl">
               <Image
                 className="object-cover h-full w-full"
-                src="./accountimg/ai.jpeg"
+                src="/accountimg/ai.jpeg"
                 alt=""
                 width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
               <h1 className="text-white text-3xl font-bold absolute bottom-15 px-10">
                 BUILD YOUR RESUME WITH TEXTILE VOICE
@@ -148,13 +126,11 @@ const Page = () => {
 
         <div
           id="sidebar"
-          className="relative h-full ml-2 bg-white w-[28vw] hidden md:block"
+          className="relative ml-2 bg-white w-[28vw] hidden md:block"
         >
-          <Image className="pt-10" src="./account.jpeg" alt="img" 
+          <Image className="pt-10 h-full w-full" src="/account.jpeg" alt="img" 
           width={0}
           height={0}
-          fill // Automatically adjusts to parent width and height
-          style={{ objectFit: "contain" }} // Adjusts how the image scales
           />
           <ul className="pl-10 list-disc">
             <li className="pb-4">Complete your profile to get noticed!</li>
@@ -174,9 +150,9 @@ const Page = () => {
           </ul>
         </div>
       </div>
-
+        
       {/* Sidebar Component */}
-      {isSidebarOpen && (
+      {/* {isSidebarOpen && (
         <div className="">
           <Sidebar />
           <button
@@ -184,7 +160,7 @@ const Page = () => {
             onClick={() => setIsSidebarOpen(false)}
           ></button>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

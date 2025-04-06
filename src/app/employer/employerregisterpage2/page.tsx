@@ -10,8 +10,6 @@ const page = () => {
           <Image src="../employerimg/signupbg.jpeg" alt="" 
           width={0}
           height={0}
-          fill // Automatically adjusts to parent width and height
-          style={{ objectFit: "contain" }} // Adjusts how the image scales
           />
         </div>
         <div className="flex md:w-1/2 justify-center md:px-20 px-4 items-center bg-white">

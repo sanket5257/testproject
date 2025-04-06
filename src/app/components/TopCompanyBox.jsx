@@ -26,12 +26,10 @@ const TopCompanyBox = () => {
                 <Image
                   key={index}
                   className="md:size-50 size-16 "
-                  src="./apple.png"
+                  src="/apple.png"
                   alt="company logo"
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
               );
             })}

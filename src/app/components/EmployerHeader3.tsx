@@ -27,8 +27,6 @@ const EmployerHeader3 = () => {
             alt="Notifications"
             width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
           />
           <Image
             className="size-8 cursor-pointer"
@@ -37,8 +35,6 @@ const EmployerHeader3 = () => {
             onClick={() => {}}
             width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
           />
         </div>
 
@@ -64,8 +60,6 @@ const EmployerHeader3 = () => {
             alt="Notifications"
             width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
           />
           <Image
             className="size-12 cursor-pointer py-2"
@@ -73,8 +67,6 @@ const EmployerHeader3 = () => {
             alt="User"
             width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             onClick={() => {}}
           />
         </div>

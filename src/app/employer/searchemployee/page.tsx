@@ -215,8 +215,6 @@ const Page = () => {
               alt="Filter"
               width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
           </div>
 
@@ -236,8 +234,6 @@ const Page = () => {
                           alt="company logo"
                           width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                         />
                         <p className="text-sm text-[#004C99] mt-2">
                           {job.employee}
@@ -251,8 +247,6 @@ const Page = () => {
                             alt="save"
                             width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                           />
                         </div>
                       </div>

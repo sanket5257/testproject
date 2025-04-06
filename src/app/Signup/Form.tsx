@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Header from "../components/Header";
 import Image from "next/image";
 
 const Form = () => {
@@ -13,15 +12,12 @@ const Form = () => {
 
   return (
     <div className=" w-full font-Montserrat text-lg">
-      <Header />
 
       <div className=" bg-white md:flex md:pt-[15vh] pt-[10vh]">
         <div className="relative overflow-hidden md:flex md:w-1/2 bg-white justify-around items-center">
-          <Image src="./signupbg.jpeg" alt="" 
-          width={0}
-          height={0}
-          fill // Automatically adjusts to parent width and height
-          style={{ objectFit: "contain" }} // Adjusts how the image scales
+          <Image src="/signupbg.jpeg" className="" alt="signup bg" 
+          width={800}
+          height={500}
           />
         </div>
         <div className="flex md:w-1/2 justify-center md:px-20 px-4 items-center bg-white">

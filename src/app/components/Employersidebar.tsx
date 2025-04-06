@@ -16,8 +16,6 @@ const Employersidebar = () => {
               alt=""
               width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
           </div>
         </div>
@@ -31,8 +29,6 @@ const Employersidebar = () => {
             
             width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <h3>Company Profile</h3>
           </div>
@@ -40,8 +36,6 @@ const Employersidebar = () => {
             <Image className="size-5" src="../employerimg/search.png" alt=""
             width={0}
             height={0}
-            fill // Automatically adjusts to parent width and height
-            style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <h3>Search Employee</h3>
           </div>
@@ -49,8 +43,6 @@ const Employersidebar = () => {
             <Image className="size-5" src="../employerimg/mobile.png" alt="" 
             width={0}
             height={0}
-            fill // Automatically adjusts to parent width and height
-            style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <h3>Post Jobs</h3>
           </div>
@@ -61,8 +53,6 @@ const Employersidebar = () => {
               alt=""
               width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <h3>Active Jobs</h3>
           </div>
@@ -70,8 +60,6 @@ const Employersidebar = () => {
             <Image className="size-5" src="../save.svg" alt="" 
             width={0}
             height={0}
-            fill // Automatically adjusts to parent width and height
-            style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <h3>Deleted Jobs</h3>
           </div>
@@ -79,8 +67,6 @@ const Employersidebar = () => {
             <Image className="size-5" src="../employerimg/delete.png" alt="" 
             width={0}
             height={0}
-            fill // Automatically adjusts to parent width and height
-            style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <h3>Saved Candidate</h3>
           </div>
@@ -88,8 +74,6 @@ const Employersidebar = () => {
             <Image className="size-5" src="../employerimg/pending.png" alt="" 
             width={0}
             height={0}
-            fill // Automatically adjusts to parent width and height
-            style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
             <h3>Packages</h3>
           </div>

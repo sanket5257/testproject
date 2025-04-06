@@ -86,12 +86,10 @@ const JobCardSkillBased = () => {
                       <div className="flex gap-1">
                         <Image
                           className="size-8"
-                          src="./google.svg"
+                          src="/google.svg"
                           alt="company logo"
                           width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                         />
                         <p className="text-sm text-gray-600 mt-2">
                           {job.company}
@@ -101,23 +99,19 @@ const JobCardSkillBased = () => {
                         <div className="bg-white flex justify-center items-center size-8 rounded-full">
                           <Image
                             className="size-7"
-                            src="./save.svg"
+                            src="/save.svg"
                             alt="save"
                             width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                           />
                         </div>
                         <div className="bg-white flex justify-center items-center size-8 rounded-full">
                           <Image
                             className="size-7"
-                            src="./save.svg"
+                            src="/save.svg"
                             alt="save"
                             width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                           />
                         </div>
                       </div>

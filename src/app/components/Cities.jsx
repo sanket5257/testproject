@@ -23,7 +23,7 @@ const Cities = () => {
                 >
                   <Image
                     className="size-30 md:size-50 rounded-xl shadow-xl"
-                    src={`./${city}.jpeg`}
+                    src={`/${city}.jpeg`}
                     width={0}
                     height={0}
                     alt="company logo"

@@ -17,8 +17,6 @@ const Page = () => {
                 alt=""
                 width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               />
             </div>
             <div>
@@ -39,8 +37,6 @@ const Page = () => {
               alt=""
               width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
             />
           </div>
           <div className="flex pt-10 gap-8">
@@ -52,8 +48,6 @@ const Page = () => {
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>Kolhapur</h3>
               </div>
@@ -64,8 +58,6 @@ const Page = () => {
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>johndoe@gmail.com</h3>
               </div>
@@ -76,8 +68,6 @@ const Page = () => {
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>+91 00000 00000</h3>
               </div>
@@ -91,8 +81,6 @@ const Page = () => {
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>416 115</h3>
               </div>
@@ -103,8 +91,6 @@ const Page = () => {
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>10340 02300</h3>
               </div>
@@ -115,8 +101,6 @@ const Page = () => {
                   alt=""
                   width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
                 />
                 <h3>www.textilevoice.com</h3>
               </div>

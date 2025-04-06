@@ -26,7 +26,7 @@ const Header = () => {
           <div className="h-full p-2">
             <Image
               className="h-full w-full object-cover p-4"
-              src="./logo.jpg"
+              src="/logo.jpg"
               alt=""
               width={50}
               height={50}

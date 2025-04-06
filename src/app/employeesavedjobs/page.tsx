@@ -1,5 +1,4 @@
 "use client";
-import Header3 from "../components/Header3";
 import React, { useState } from "react";
 import Image from "next/image";
 
@@ -19,7 +18,7 @@ const Page = () => {
       company: "Tech Corp",
       location: "Remote",
       expireddate: "Applied on January 30, 2025",
-      companylogo: "./twitter.png",
+      companylogo: "/twitter.png",
     },
     {
       id: 2,
@@ -27,7 +26,7 @@ const Page = () => {
       company: "Code Labs",
       location: "New York",
       expireddate: "Applied on January 30, 2025",
-      companylogo: "./google.svg",
+      companylogo: "/google.svg",
     },
     {
       id: 3,
@@ -35,7 +34,7 @@ const Page = () => {
       company: "Design Studio",
       location: "San Francisco",
       expireddate: "Applied on January 30, 2025",
-      companylogo: "./apple.png",
+      companylogo: "/apple.png",
     },
   ];
 
@@ -48,10 +47,9 @@ const Page = () => {
 
   return (
     <>
-      <div>
-        <Header3 setIsSidebarOpen={() => {}} />
+      <div className="">
       </div>
-      <div className="flex flex-col font-Montserrat md:flex-row w-full min-h-screen pt-16 bg-white text-black">
+      <div className="flex flex-col min-h-screen pb-10  font-Montserrat md:flex-row w-full pt-16 bg-white text-black">
         {/* Mobile Button to Open Filter & Sort */}
 
         {/* Sidebar Filter & Sort (Hidden on Desktop) */}
@@ -103,8 +101,6 @@ const Page = () => {
               className="md:hidden size-8 border p-1.5 mr-2 rounded mb-4"
               width={0}
                     height={0}
-                    fill // Automatically adjusts to parent width and height
-                    style={{ objectFit: "contain" }} // Adjusts how the image scales
               onClick={() => setIsFilterOpen(true)}
             ></Image>
             <h2 className="text-4xl font-bold mb-4 font-Montserrat">
@@ -124,8 +120,6 @@ const Page = () => {
                   <Image className="size-20 p-4" src={job.companylogo} alt="" 
                   width={0}
                   height={0}
-                  fill // Automatically adjusts to parent width and height
-                  style={{ objectFit: "contain" }} // Adjusts how the image scales
                   />
                   <div>
                     <h3 className="text-xl font-semibold">{job.title}</h3>
