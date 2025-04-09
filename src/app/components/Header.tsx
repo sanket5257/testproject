@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import Signin from "./Signin";
 import Image from "next/image";
 
 const Header = () => {
   // State to toggle mobile navigation visibility
   const [isNavVisible, setIsNavVisible] = useState(false);
-  const [showModel, setShowModel] = useState(false);
 
   // const closeSignin = () => {
   //   setIsOpen(false);
@@ -58,7 +56,7 @@ const Header = () => {
             <a href="">8308463462 </a>
           </div>
           <button
-            onClick={() => setShowModel(true)}
+            
             className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md md:h-9 md:w-24"
           >
             Sign In
@@ -80,19 +78,15 @@ const Header = () => {
             <button className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md h-9 w-[35vw]">
               Sign Up
             </button>
-            <button className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md h-9 w-[35vw] ">
+            <button
+   className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md h-9 w-[35vw] ">
               Sign In
             </button>
           </div>
         </div>
       )}
 
-      {/* Render Signin Modal */}
-      {showModel && (
-        <Signin
-        //  Close={showModel}
-        />
-      )}
+      
     </div>
   );
 };

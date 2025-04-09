@@ -3,11 +3,13 @@ import Signin from "../components/Signin";
 import React from "react";
 
 const page = () => {
-  // Function to close the modal if the backdrop (not the modal content) is clicked
+  const handleClose = () => {
+    console.log("Signin closed"); 
+  };
 
   return (
     <div>
-      <Signin />
+      <Signin onClose={handleClose} />
     </div>
   );
 };

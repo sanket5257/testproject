@@ -1,11 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Signin from "./components/Signin";
 
 const Hero = () => {
-  const [showModel, setShowModel] = useState(false);
 
   return (
     <div className="h-screen w-full relative ">
@@ -48,7 +46,7 @@ const Hero = () => {
                   </h2>
                   <div className="flex pb-4 md:pb-0 gap-6 opacity-100 px-4">
                     <button
-                      onClick={() => setShowModel(true)}
+                      
                       className="border-3 font-bold flex justify-center items-center md:text-2xl text-white rounded-md px-15 py-1"
                     >
                       Sign In
@@ -96,14 +94,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {/* Render Signin Modal */}
-      {showModel && (
-        <Signin
-        // Close={ () => {
-        //   setShowModel(false);
-        // }}
-        />
-      )}
+      
     </div>
   );
 };

@@ -1,7 +1,21 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const JobCardSkillBased = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 300;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const jobs = [
     {
       company: "google",
@@ -59,7 +73,6 @@ const JobCardSkillBased = () => {
       postedDate: "March 12, 2025",
       detailsLink: "#",
     },
-    // Add more job data as needed
   ];
 
   return (
@@ -72,14 +85,34 @@ const JobCardSkillBased = () => {
           <h1 className="pt-10 text-center md:text-3xl font-Montserrat font-bold text-blue-500">
             Jobs Based On Your Applies
           </h1>
-          <h3 className="float-right pr-10 ">See All &#x27A4;</h3>
+          <h3 className="float-right pr-10">See All &#x27A4;</h3>
 
-          <div className="flex pt-6 flex-nowrap overflow-x-auto w-full md:justify-start pl-10 gap-5 items-center">
+          {/* Slide buttons */}
+          <div className="md:flex hidden justify-end gap-2 pr-10">
+            <button
+              onClick={() => scroll("left")}
+              className="bg-blue-100 rounded-full p-1 hover:bg-blue-200"
+            >
+              <ChevronLeft className="text-blue-600 w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              className="bg-blue-100 rounded-full p-1 hover:bg-blue-200"
+            >
+              <ChevronRight className="text-blue-600 w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Scrollable container */}
+          <div
+            ref={scrollRef}
+            className="flex pt-6 overflow-x-auto w-full md:justify-st pl-10 gap-5 items-center scroll-smooth no-scrollbar"
+          >
             {jobs.map((job, index) => {
               return (
                 <div
                   key={index}
-                  className="flex flex-col justify-between items-center p-2    bg-white shadow-xl rounded-lg border border-gray-300"
+                  className="flex flex-col justify-between items-center p-2 bg-white shadow-xl rounded-lg border border-gray-300"
                 >
                   <div className=" rounded-xl md:w-[26vw] lg:w-[20vw] xl:w-[16vw] w-[50vw] sm:w-[35vw] h-full p-2">
                     <div className="flex justify-between items-center">
@@ -89,7 +122,7 @@ const JobCardSkillBased = () => {
                           src="/google.svg"
                           alt="company logo"
                           width={0}
-                    height={0}
+                          height={0}
                         />
                         <p className="text-sm text-gray-600 mt-2">
                           {job.company}
@@ -102,7 +135,7 @@ const JobCardSkillBased = () => {
                             src="/save.svg"
                             alt="save"
                             width={0}
-                    height={0}
+                            height={0}
                           />
                         </div>
                         <div className="bg-white flex justify-center items-center size-8 rounded-full">
@@ -111,7 +144,7 @@ const JobCardSkillBased = () => {
                             src="/save.svg"
                             alt="save"
                             width={0}
-                    height={0}
+                            height={0}
                           />
                         </div>
                       </div>
@@ -128,13 +161,13 @@ const JobCardSkillBased = () => {
                     </div>
 
                     <div className="h-[10vh] flex-wrap flex justify-start gap-2 items-center">
-                      <p className="text-[1.6vh] border-2 p-0.5   rounded-xl inline-block text-gray-600 mt-2">
+                      <p className="text-[1.6vh] border-2 p-0.5 rounded-xl inline-block text-gray-600 mt-2">
                         {job.jobType}
                       </p>
-                      <p className="text-[1.6vh] border-2 p-0.5  rounded-xl inline-block text-gray-600 mt-2">
+                      <p className="text-[1.6vh] border-2 p-0.5 rounded-xl inline-block text-gray-600 mt-2">
                         {job.jobType}
                       </p>
-                      <p className="text-[1.6vh] border-2 p-0.5  rounded-xl inline-block text-gray-600 mt-2">
+                      <p className="text-[1.6vh] border-2 p-0.5 rounded-xl inline-block text-gray-600 mt-2">
                         {job.jobType}
                       </p>
                     </div>

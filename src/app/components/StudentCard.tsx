@@ -1,7 +1,20 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react"; // you can use any icon lib or your own SVG
 
 const StudentCard = () => {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      const scrollTo = direction === "left" ? scrollLeft - clientWidth : scrollLeft + clientWidth;
+      scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
+    }
+  };
+
   const student = [
     {
       name: "employee1",
@@ -48,60 +61,66 @@ const StudentCard = () => {
   ];
 
   return (
-    <div className=" pt-4 w-full">
+    <div className="pt-4 w-full relative">
       <div
         id="students"
-        className=" w-full overflow-x-hidden md:pt-10 flex flex-col justify-center items-center"
+        className="w-full overflow-x-hidden md:pt-10 flex flex-col justify-center items-center"
       >
-        <h1 className="pb-10  text-center md:text-4xl  font-Montserrat font-bold text-blue-600">
+        <h1 className="pb-10 text-center md:text-4xl font-Montserrat font-bold text-blue-600">
           Students Placed Highest Packages
         </h1>
 
-        <div className=" md:h-[60vh] h-[30vh] w-full no-scrollbar overflow-x-auto flex justify-start pl-4 items-center  gap-4  rounded-xl">
-          {student.map((student, index) => {
-            return (
-              <div
-                key={index}
-                id={`student${index}`}
-                className=" relative h-full flex shrink-0 justify-between items-end rounded-2xl overflow-hidden text-white font-Montserrat md:w-[26vw] "
-              >
-                <Image
-                  className="object-cover h-full w-full"
-                  src={`${student.name}.jpeg`}
-                  alt={student.name}
-                  width={0}
-                    height={0}
-                />
+        {/* Slider buttons */}
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md rounded-full p-2 hover:bg-gray-200"
+        >
+          <ChevronLeft className="text-blue-600 w-6 h-6" />
+        </button>
 
-                <div
-                  id="student-info"
-                  className="flex opacity-0 hover:opacity-100 flex-col items-center  p-6 justify-center w-full h-1/2 absolute"
-                >
-                  <div className="bg-blue-600 h-full w-full absolute opacity-60"></div>
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md rounded-full p-2 hover:bg-gray-200"
+        >
+          <ChevronRight className="text-blue-600 w-6 h-6" />
+        </button>
 
-                  <h1 className="z-10 md:text-4xl font-Montserrat font-bold ">
-                    {student.salary}
-                  </h1>
+        <div
+          ref={scrollRef}
+          className="md:h-[60vh] h-[30vh] w-full overflow-x-auto no-scrollbar flex pl-4 gap-4 items-center rounded-xl scroll-smooth"
+        >
+          {student.map((student, index) => (
+            <div
+              key={index}
+              className="relative h-full flex-shrink-0 flex justify-between items-end rounded-2xl overflow-hidden text-white font-Montserrat md:w-[26vw] w-[70vw]"
+            >
+              <Image
+                className="object-cover h-full w-full"
+                src={`/${student.name}.jpeg`}
+                alt={student.name}
+                width={0}
+                height={0}
+              />
 
-                  <p className="z-10 text-[1.2vw]">
-                    `&quot;` I am {student.position}. I was placed through{" "}
-                    <span className="font-bold">{student.platform}</span>{" "}
-                    platform in{" "}
-                    <span className="font-bold">{student.company}</span> with{" "}
-                    <span className="font-bold">{student.salary}</span>`&quot;`
-                  </p>
+              <div className="absolute w-full h-1/2 bottom-0 bg-blue-600 bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6">
+                <h1 className="z-10 md:text-4xl font-bold">{student.salary}</h1>
 
-                  <h1 className="z-10 ml-[15vw] text-[1.2vw] font-Montserrat font-bold ">
-                    ~{student.name}
-                  </h1>
+                <p className="z-10 text-sm md:text-base text-center">
+                  “I am {student.position}. I was placed through <span className="font-bold">{student.platform}</span> platform in{" "}
+                  <span className="font-bold">{student.company}</span> with{" "}
+                  <span className="font-bold">{student.salary}</span>”
+                </p>
 
-                  <button className="z-10 text-white mt- text-[1.2vw] font-bold border-2 rounded-md px-4 py-2 ">
-                    See All Stories
-                  </button>
-                </div>
+                <h1 className="z-10 mt-2 text-sm md:text-base font-bold">
+                  ~{student.name}
+                </h1>
+
+                <button className="z-10 mt-2 text-white text-sm md:text-base font-bold border-2 rounded-md px-4 py-1">
+                  See All Stories
+                </button>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </div>
