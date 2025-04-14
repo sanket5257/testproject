@@ -4,9 +4,9 @@ class ApiService {
   // get methods
 
   //post methods
-  async login(id: string, pw: string) {
-    //use axios logic here
-  }
+  // async login(id: string, pw: string) {
+  //   //use axios logic here
+  // }
 }
 
 const apiService = new ApiService();
