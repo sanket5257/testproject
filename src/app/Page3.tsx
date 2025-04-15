@@ -5,8 +5,8 @@ const Page3 = () => {
   return (
     <div className=" w-full pt-10 md:pt-20">
       <div
-        id="upcoming-Exhibition"
-        className="md:h-[60vh] h-[20vh] w-full pt-10 flex flex-col justify-center items-center"
+        id="Hothiring"
+        className="h-[25vh] md:h-[60vh] w-full pt-10 flex flex-col justify-center items-center"
       >
         <h1 className="pb-10  text-center md:text-3xl font-Montserrat font-bold text-blue-600">
           {" "}
@@ -14,9 +14,15 @@ const Page3 = () => {
         </h1>
 
         <div className="bg-[url(/exhibition.jpeg)] bg-cover bg-center h-full w-[95vw] rounded-xl">
-          <div className="h-full  flex justify-between items-end pb-12 pl-14 pr-14 text-white font-Montserrat w-full opacity-0 hover:opacity-100">
-            <div>
-              <h1 className="font-bold text-3xl">Exhibition NAME</h1>
+        <div>
+          
+        </div>
+        <div className="h-full w-full">
+        <div className="h-full opacity-0 flex justify-between items-end hover:opacity-100 overflow-hidden rounded-2xl text-white font-Montserrat w-full ">
+                <div className="bg-black opacity-30 h-full w-full"></div>
+                <div className="absolute w-[90vw] px-20 py-10 flex justify-between">
+                <div >
+              <h1 className="font-bold text-3xl">COMPANY NAME</h1>
               <p>
                 join our dynamic team as software engineer,where you will be
                 resposible for devloping
@@ -24,9 +30,13 @@ const Page3 = () => {
             </div>
 
             <button className="hover:bg-linear-to-bl from-[#007BFF] to-[#004C99] text-white text-lg font-bold border-2  rounded-md  h-12 w-[13vw]">
-              Details
+              Apply Now
             </button>
+
+                </div>
           </div>
+
+        </div>
         </div>
       </div>
 

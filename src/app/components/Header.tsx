@@ -57,11 +57,11 @@ const Header = () => {
           </div>
           <button
             
-            className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md md:h-9 md:w-24"
+            className="bg-[#0866FF] text-white rounded-md md:h-9 md:w-24"
           >
             Sign In
           </button>
-          <button className="bg-gradient-to-bl from-[#007BFF] to-[#004C99] text-white rounded-md md:h-9 md:w-24">
+          <button className="bg-[#0866FF] text-white rounded-md md:h-9 md:w-24">
             Sign Up
           </button>
         </div>

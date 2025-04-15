@@ -12,12 +12,12 @@ const LandingPage = () => {
     { id: 2, name: "Amazon", path: "/companies/amazon.svg" },
     { id: 3, name: "Meta", path: "/companies/meta.svg" },
     { id: 4, name: "Netflix", path: "/companies/netflix.png" },
-    { id: 5, name: "Apple", path: "/companies/atlassian.svg" },
-    { id: 6, name: "Tesla", path: "/companies/ibm.svg" },
+    { id: 5, name: "atlassian", path: "/companies/atlassian.svg" },
+    { id: 6, name: "google", path: "/companies/google.webp" },
   ];
 
   return (
-    <main className="flex bg-cover bg-center bg-[url(/background3.jpeg)] flex-col gap-10 sm:gap-20 py-10 sm:py-20">
+    <main className="flex bg-cover bg-center text-black flex-col gap-10 sm:gap-20 py-10 sm:py-20">
       
       {/* Show Signin if button is clicked */}
       {showSignin ? (
@@ -25,52 +25,37 @@ const LandingPage = () => {
       ) : (
         <>
           <section className="text-center">
-            <h1 className="flex flex-col pt-20 items-center justify-center bg-gradient-to-br from-gray-500 via-gray-200 to-white text-transparent bg-clip-text font-extrabold text-4xl sm:text-6xl lg:text-8xl tracking-tighter py-4">
+            <h1 className="flex flex-col text-black pt-20 items-center justify-center  font-extrabold text-4xl sm:text-6xl lg:text-8xl tracking-tighter py-4">
               Find Your Dream Job
               <span className="flex items-center gap-2 sm:gap-6">
-                and get
-                <Image
-                  src="/logo2.png"
-                  className="lg:h-[20vh] lg:w-[20vw] h-[10vh] w-[25vw]"
-                  alt="Hirrd Logo"
-                  width={0}
-                  height={0}
-                />
+                and get Hired
+                
               </span>
             </h1>
-            <p className="text-gray-300 sm:mt-4 text-xs sm:text-xl">
+            <p className="text-black sm:mt-4 text-xs sm:text-xl">
               Explore thousands of job listings or find the perfect candidate
             </p>
           </section>
 
-          <section className="grid grid-cols-1 px-10 md:grid-cols-2 gap-4">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-gradient-to-br from-black via-gray-600 to-white">
-              <h2 className="text-lg font-bold mb-2">For Job Seekers</h2>
-              <p className="text-sm text-gray-300">
+          <section className=" px-10 md:flex justify-center items-center gap-10">
+            <div className="bg-white mb-4 shadow-xl flex justify-center items-center flex-col cursor-pointer h-[20vh] border-gray-200 border rounded-2xl p-6 hover:bg-gradient-to-br from-red-200 via-red-100 to-red-50 ">
+              <h2 className="text-2xl font-bold mb-2">For Job Seekers</h2>
+              <p className="text-sm text-black">
                 Search and apply for jobs, track applications, and more.
               </p>
-              <button
-                onClick={() => setShowSignin(true)}
-                className="bg-blue-700 float-right cursor-pointer hover:bg-blue-700 text-white text-lg font-semibold py-2 px-6 rounded-xl"
-              >
-                Find Jobs
-              </button>
+              
             </div>
 
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-gradient-to-br from-black via-gray-600 to-white">
-              <h2 className="text-lg font-bold mb-2">For Employers</h2>
-              <p className="text-sm text-gray-300">
+            <div className="bg-white shadow-xl cursor-pointer flex justify-center items-center flex-col h-[20vh] border border-gray-200 rounded-2xl p-6 hover:bg-gradient-to-br from-blue-200 via-blue-100 to-blue-50">
+              <h2 className="text-2xl font-bold mb-2">For Employers</h2>
+              <p className="text-sm text-black">
                 Post jobs, manage applications, and find the best candidates.
               </p>
-              <a href="/post-job">
-                <button className="bg-red-700 cursor-pointer float-right hover:bg-red-700 text-white text-lg font-semibold py-2 px-6 rounded-xl">
-                  Post a Job
-                </button>
-              </a>
+              
             </div>
           </section>
 
-          <div className="flex justify-between gap-6 overflow-x-auto px-10 items-center scroll-smooth">
+          <div className="hidden md:flex justify-between  gap-6 overflow-x-auto px-18 items-center scroll-smooth">
             {companies.map(({ name, id, path }) => (
               <div key={id} className="flex-shrink-0 justify-center">
                 <Image

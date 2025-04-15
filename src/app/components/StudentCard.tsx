@@ -61,7 +61,7 @@ const StudentCard = () => {
   ];
 
   return (
-    <div className="pt-4 w-full relative">
+    <div className="pt-4 px-4 w-full relative">
       <div
         id="students"
         className="w-full overflow-x-hidden md:pt-10 flex flex-col justify-center items-center"
@@ -101,8 +101,8 @@ const StudentCard = () => {
                 width={0}
                 height={0}
               />
-
-              <div className="absolute w-full h-1/2 bottom-0 bg-blue-600 bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6">
+                <div className=" absolute h-full w-full opacity-0 hover:opacity-100">
+                <div className=" w-full h-1/2 absolute bottom-0 bg-blue-600 opacity-80 flex flex-col items-center justify-center p-6">
                 <h1 className="z-10 md:text-4xl font-bold">{student.salary}</h1>
 
                 <p className="z-10 text-sm md:text-base text-center">
@@ -119,6 +119,8 @@ const StudentCard = () => {
                   See All Stories
                 </button>
               </div>
+
+                </div>
             </div>
           ))}
         </div>

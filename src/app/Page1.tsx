@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 const Page1 = () => {
   const company = [
@@ -13,7 +12,7 @@ const Page1 = () => {
   console.log(company);
 
   return (
-    <div className=" w-full">
+    <div className=" w-full pb-10">
       <div
         id="Hothiring"
         className="h-[25vh] md:h-[60vh] w-full pt-10 flex flex-col justify-center items-center"
@@ -24,8 +23,14 @@ const Page1 = () => {
         </h1>
 
         <div className="bg-[url(/hirebg.jpeg)] bg-cover bg-center h-full w-[95vw] rounded-xl">
-          <div className="h-full  flex justify-between items-end pb-12 pl-14 pr-14 text-white font-Montserrat w-full opacity-0 hover:opacity-100">
-            <div>
+        <div>
+          
+        </div>
+        <div className="h-full w-full">
+        <div className="h-full opacity-0 flex justify-between items-end hover:opacity-100 overflow-hidden rounded-2xl text-white font-Montserrat w-full ">
+                <div className="bg-black opacity-30 h-full w-full"></div>
+                <div className="absolute w-[90vw] px-20 py-10 flex justify-between">
+                <div >
               <h1 className="font-bold text-3xl">COMPANY NAME</h1>
               <p>
                 join our dynamic team as software engineer,where you will be
@@ -36,11 +41,15 @@ const Page1 = () => {
             <button className="hover:bg-linear-to-bl from-[#007BFF] to-[#004C99] text-white text-lg font-bold border-2  rounded-md  h-12 w-[13vw]">
               Apply Now
             </button>
+
+                </div>
           </div>
+
+        </div>
         </div>
       </div>
 
-      <div
+      {/* <div
         id="Topcompanies"
         className=" w-full pt-14 md:pt-10 flex flex-col justify-center items-center"
       >
@@ -63,7 +72,7 @@ const Page1 = () => {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
