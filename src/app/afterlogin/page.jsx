@@ -41,7 +41,7 @@ const Page = () => {
       <Cities />
 
       <div
-        id="upcoming-Exhibition"
+        id="exhibition"
         className="md:h-[50vh] h-[20vh] pb-10  w-full mt-21 flex flex-col justify-center items-center"
       >
         <h1 className="pb-8  text-center md:text-3xl font-Montserrat font-bold text-blue-600">

@@ -1,5 +1,5 @@
 class ApiService {
-  readonly base_url: string = "https://abcd.com";
+  readonly base_url: string = "http://192.168.1.222:4000";
 
   // get methods
 

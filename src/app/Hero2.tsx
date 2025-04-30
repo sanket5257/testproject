@@ -1,11 +1,10 @@
 "use client"
 
 import Image from "next/image";
-import { useState } from "react";
-import Signin from "./components/Signin";
+
 
 const LandingPage = () => {
-  const [showSignin, setShowSignin] = useState(false);
+  
 
   const companies = [
     { id: 1, name: "Google", path: "/companies/google.webp" },
@@ -19,10 +18,7 @@ const LandingPage = () => {
   return (
     <main className="flex bg-cover bg-center text-black flex-col gap-10 sm:gap-20 py-10 sm:py-20">
       
-      {/* Show Signin if button is clicked */}
-      {showSignin ? (
-         <Signin onClose={() => setShowSignin(false)} />
-      ) : (
+      
         <>
           <section className="text-center">
             <h1 className="flex flex-col text-black pt-20 items-center justify-center  font-extrabold text-4xl sm:text-6xl lg:text-8xl tracking-tighter py-4">
@@ -37,8 +33,8 @@ const LandingPage = () => {
             </p>
           </section>
 
-          <section className=" px-10 md:flex justify-center items-center gap-10">
-            <div className="bg-white mb-4 shadow-xl flex justify-center items-center flex-col cursor-pointer h-[20vh] border-gray-200 border rounded-2xl p-6 hover:bg-gradient-to-br from-red-200 via-red-100 to-red-50 ">
+          <section className=" px-10 flex-col flex md:flex-row justify-center items-center gap-10">
+            <div className="bg-white shadow-xl flex justify-center items-center flex-col cursor-pointer h-[20vh] border-gray-200 border rounded-2xl p-6 hover:bg-gradient-to-br from-red-200 via-red-100 to-red-50 ">
               <h2 className="text-2xl font-bold mb-2">For Job Seekers</h2>
               <p className="text-sm text-black">
                 Search and apply for jobs, track applications, and more.
@@ -69,7 +65,7 @@ const LandingPage = () => {
             ))}
           </div>
         </>
-      )}
+    
     </main>
   );
 };

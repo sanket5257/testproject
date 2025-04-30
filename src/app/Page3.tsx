@@ -5,7 +5,7 @@ const Page3 = () => {
   return (
     <div className=" w-full pt-10 md:pt-20">
       <div
-        id="Hothiring"
+        id="exhibition"
         className="h-[25vh] md:h-[60vh] w-full pt-10 flex flex-col justify-center items-center"
       >
         <h1 className="pb-10  text-center md:text-3xl font-Montserrat font-bold text-blue-600">
