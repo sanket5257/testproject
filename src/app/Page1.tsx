@@ -3,27 +3,32 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import api from "./services/api_service";
-import { log } from "console";
+import { AxiosResponse } from "axios";
+
+import Image from "next/image";
 const Page1 = () => {
   interface Data {
     name: string;
     description: string;
     image_url: string;
     url: string;
+    ID:string
   }
   const [data, setData] = useState<Data[]>([
-    { name: "", description: "", image_url: "", url: "" },
+    { name: "", description: "", image_url: "", url: "" ,ID: ""},
   ]);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await api.getHotHiring();
-      const result = await response.json();
-      console.log(result);
-      setData(result);
+      try {
+        const response: AxiosResponse<Data[]> = await api.getHotHiring();
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching top companies:", error);
+      }
     }
     fetchData();
-  }, []);
+  }, [])
   return (
     <div className=" w-full pb-10">
       <div
@@ -35,9 +40,10 @@ const Page1 = () => {
           HOT HIRING
         </h1>
 
-        <div className="bg-[url({/hirebg.jpeg})] bg-cover bg-center h-full w-[95vw] rounded-xl">
+       {data&& <div className={`bg-[url('/hirebg.jpeg')] bg-cover bg-center h-full w-[95vw] rounded-xl`}>
           <div></div>
           <div className="h-full w-full">
+           
             <div className="h-full opacity-0 flex justify-between items-end hover:opacity-100 overflow-hidden rounded-2xl text-white font-Montserrat w-full ">
               <div className="bg-black opacity-30 h-full w-full"></div>
               <div className="absolute w-[90vw] px-20 py-10 flex justify-between">
@@ -46,13 +52,13 @@ const Page1 = () => {
                   <p>{data[0].description}</p>
                 </div>
 
-                <button className="hover:bg-linear-to-bl from-[#007BFF] to-[#004C99] text-white text-lg font-bold border-2  rounded-md  h-12 w-[13vw]">
+                <a href={data[0].url} className=" flex justify-center items-center   hover:bg-linear-to-bl from-[#007BFF] to-[#004C99] text-white text-lg font-bold border-2  rounded-md  h-12 w-[13vw]">
                   Apply Now
-                </button>
+                </a>
               </div>
             </div>
           </div>
-        </div>
+        </div>}
       </div>
     </div>
   );

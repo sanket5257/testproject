@@ -1,7 +1,37 @@
-import React from "react";
+"use client"
+
+import React, { useEffect, useState } from "react";
 import Institutes from "./components/Institutes";
+import api from "./services/api_service";
+import { AxiosResponse } from "axios";
+
 
 const Page3 = () => {
+interface Data {
+      name: string;
+      image_url: string;
+      url: string;
+      ID:string;
+      description: string;
+    }
+    
+    
+    const [data, setData] = useState<Data[]>([
+      { name: "", image_url: "", url: "", ID: "", description:"" },
+    ]);
+
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const response: AxiosResponse<Data[]> = await api.getUpComingExhibition();
+          setData(response.data);
+        } catch (error) {
+          console.error("Error fetching top companies:", error);
+        }
+      }
+      fetchData();
+    }, [])
+  
   return (
     <div className=" w-full pt-10 md:pt-20">
       <div
@@ -22,16 +52,15 @@ const Page3 = () => {
                 <div className="bg-black opacity-30 h-full w-full"></div>
                 <div className="absolute w-[90vw] px-20 py-10 flex justify-between">
                 <div >
-              <h1 className="font-bold text-3xl">COMPANY NAME</h1>
+              <h1 className="font-bold text-3xl">{data[0].name}</h1>
               <p>
-                join our dynamic team as software engineer,where you will be
-                resposible for devloping
+                {data[0].description}
               </p>
             </div>
 
-            <button className="hover:bg-linear-to-bl from-[#007BFF] to-[#004C99] text-white text-lg font-bold border-2  rounded-md  h-12 w-[13vw]">
+            <a href={data[0].url} className="flex justify-center items-center hover:bg-linear-to-bl from-[#007BFF] to-[#004C99] text-white text-lg font-bold border-2  rounded-md  h-12 w-[13vw]">
               Apply Now
-            </button>
+            </a>
 
                 </div>
           </div>

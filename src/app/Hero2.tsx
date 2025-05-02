@@ -1,19 +1,44 @@
 "use client"
 
 import Image from "next/image";
-
+import { useEffect, useState } from "react";
+import api from "./services/api_service";
+import { AxiosResponse } from "axios";
 
 const LandingPage = () => {
+  interface Data {
+      name: string;
+      image_url: string;
+      url: string;
+      ID:string;
+      
+    }
+    
+    const [data, setData] = useState([
+      { name: "", image_url: "", url: "", ID: "" },
+    ]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response: AxiosResponse<Data[]> = await api.getTopCompanies();
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching top companies:", error);
+      }
+    }
+    fetchData();
+  }, [])
   
 
-  const companies = [
-    { id: 1, name: "Google", path: "/companies/google.webp" },
-    { id: 2, name: "Amazon", path: "/companies/amazon.svg" },
-    { id: 3, name: "Meta", path: "/companies/meta.svg" },
-    { id: 4, name: "Netflix", path: "/companies/netflix.png" },
-    { id: 5, name: "atlassian", path: "/companies/atlassian.svg" },
-    { id: 6, name: "google", path: "/companies/google.webp" },
-  ];
+  // const companies = [
+  //   { id: 1, name: "Google", path: "/companies/google.webp" },
+  //   { id: 2, name: "Amazon", path: "/companies/amazon.svg" },
+  //   { id: 3, name: "Meta", path: "/companies/meta.svg" },
+  //   { id: 4, name: "Netflix", path: "/companies/netflix.png" },
+  //   { id: 5, name: "atlassian", path: "/companies/atlassian.svg" },
+  //   { id: 6, name: "google", path: "/companies/google.webp" },
+  // ];
 
   return (
     <main className="flex bg-cover bg-center text-black flex-col gap-10 sm:gap-20 py-10 sm:py-20">
@@ -52,13 +77,13 @@ const LandingPage = () => {
           </section>
 
           <div className="hidden md:flex justify-between  gap-6 overflow-x-auto px-18 items-center scroll-smooth">
-            {companies.map(({ name, id, path }) => (
-              <div key={id} className="flex-shrink-0 justify-center">
+            {data.map((company) => (
+              <div key={company.ID} className="flex-shrink-0 justify-center">
                 <Image
                   width={0}
                   height={0}
-                  src={path}
-                  alt={name}
+                  src={company.image_url}
+                  alt={company.name}
                   className="lg:size-30 size-15 object-contain"
                 />
               </div>
