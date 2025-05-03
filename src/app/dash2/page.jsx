@@ -1,84 +1,44 @@
 "use client";
 import Header2 from "../components/Header2";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import api from "../services/api_service";
+import timeAgo from "../utils/time_ago.js";
+
 
 const Page = () => {
-  type Job = {
-    company: string;
-    jobTitle: string;
-    location: string;
-    jobType: string;
-    mode: string;
-    experience: string;
-    postedDate: string;
-    detailsLink: string;
-  };
+
+  const [data, setData] = useState([
+      
+    ]);
   
-  type Filters = {
-    jobType: string[];
-    industry: string[];
-    experience: string[];
-    salary: string[];
-    mode: string[];
-    posted: string[];
-  };
+  useEffect(() => {
+    console.log("inside useEffect")
+    async function fetchData() {
+      try {
+        const response = await api.jobBasedOnApplies();
+       
+        console.log(response)
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching top companies:", error);
+      }
+    }
+    fetchData();
+  }, [])
   
-  const [filters, setFilters] = useState<Filters>({
-    jobType: [],
-    industry: [],
-    experience: [],
-    salary: [],
-    mode: [],
-    posted: [],
-  });
+  
+ 
   
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   
-  const appliedJobs: Job[] = [
-    {
-      company: "Google",
-      jobTitle: "Senior Product Manager",
-      location: "Pune, Maharashtra",
-      jobType: "Full Time",
-      mode: "On site",
-      experience: "Senior (5+ years)",
-      postedDate: "March 14, 2025",
-      detailsLink: "/jobdetails2",
-    },
-    {
-      company: "Google",
-      jobTitle: "Software Engineer",
-      location: "Bangalore, Karnataka",
-      jobType: "Part Time",
-      mode: "Remote",
-      experience: "Fresher (0-2 years)",
-      postedDate: "March 12, 2025",
-      detailsLink: "#",
-    },
-  ];
   
-  const handleCheckboxChange = (category: keyof Filters, value: string) => {
-    setFilters((prevFilters) => {
-      const currentValues = prevFilters[category];
-      return {
-        ...prevFilters,
-        [category]: currentValues.includes(value)
-          ? currentValues.filter((v) => v !== value)
-          : [...currentValues, value],
-      };
-    });
-  };
+
+  
+  
   
   // Filtering logic
-  const filteredJobs = appliedJobs.filter((job) => {
-    return (
-      (filters.jobType.length === 0 || filters.jobType.includes(job.jobType)) &&
-      (filters.experience.length === 0 || filters.experience.includes(job.experience)) &&
-      (filters.mode.length === 0 || filters.mode.includes(job.mode))
-      // Add other filters as needed
-    );
-  });
+  
   
   return (
     <>
@@ -87,7 +47,7 @@ const Page = () => {
       <div className="flex pb-10 flex-col font-Montserrat md:flex-row w-full min-h-screen bg-white text-black">
         {/* Filters Sidebar */}
         <div
-          className={`fixed inset-0 flex flex-col gap-4 items-start pl-4 pt-10 rounded-2xl bg-white border shadow-lg transition-transform transform ${
+          className={`fixed inset-0 flex flex-col gap-4 items-start pl-4 pt-15 rounded-2xl bg-white border shadow-lg transition-transform transform ${
             isFilterOpen ? "translate-x-0" : "-translate-x-full"
           } md:translate-x-10 md:mt-10 md:relative`}
         >
@@ -116,7 +76,7 @@ const Page = () => {
                     <input
                       type="checkbox"
                       className="mr-3 size-3"
-                      onChange={() => handleCheckboxChange(section.key as keyof Filters, type)}
+                      
                       />
                     {type}
                   </label>
@@ -139,18 +99,19 @@ const Page = () => {
             />
             <div className="flex gap-3 items-center">
               <h2 className="font-bold">For You</h2>
-              <h3 className="border rounded-xl text-sm p-2">{filteredJobs.length} found</h3>
+              <h3 className="border rounded-xl text-sm p-2">{data.length} found</h3>
             </div>
             <div className="flex gap-3 items-center">
               <h2 className="font-bold">Total jobs</h2>
-              <h3 className="border rounded-xl text-sm p-2">{appliedJobs.length}</h3>
+              <h3 className="border rounded-xl text-sm p-2">{data.length}</h3>
             </div>
           </div>
 
           <div className="flex pt-6 flex-wrap gap-5 justify-center items-center">
-            {filteredJobs.map((job, index) => (
+            {data.map((job) => {
+              return (
                 <div
-                  key={index}
+                  key={job.jobID}
                   className="flex flex-col justify-between items-center p-2 bg-white shadow-xl rounded-lg border border-gray-300"
                 >
                   <div className="bg-blue-100 rounded-xl md:w-[26vw] lg:w-[20vw] xl:w-[16vw] w-[50vw] sm:w-[35vw] h-full p-2">
@@ -158,13 +119,13 @@ const Page = () => {
                       <div className="flex gap-1">
                         <Image
                           className="size-8"
-                          src="/google.svg"
+                          src={job.image_url}
                           alt="company logo"
                           width={0}
                           height={0}
                         />
                         <p className="text-sm text-gray-600 mt-2">
-                          {job.company}
+                          {job.job_title}
                         </p>
                       </div>
                       <div className="flex gap-1">
@@ -213,7 +174,7 @@ const Page = () => {
 
                     <div className="flex justify-between h-[4vh] w-full mt-2 items-end">
                       <p className="text-sm text-gray-600">
-                        Posted Date: {job.postedDate}
+                      Posted: {timeAgo(job.date)}
                       </p>
                     </div>
                   </div>
@@ -224,8 +185,8 @@ const Page = () => {
                     See Details
                   </a>
                 </div>
-            ))}
-          </div>
+              );
+            })}          </div>
         </div>
       </div>
     </>

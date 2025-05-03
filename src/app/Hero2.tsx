@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import api from "./services/api_service";
 import { AxiosResponse } from "axios";
+import Link from "next/link";
 
 const LandingPage = () => {
   interface Data {
@@ -77,18 +78,18 @@ const LandingPage = () => {
           </section>
 
           <div className="hidden md:flex justify-between  gap-6 overflow-x-auto px-18 items-center scroll-smooth">
-            {data.map((company) => (
-              <div key={company.ID} className="flex-shrink-0 justify-center">
-                <Image
-                  width={0}
-                  height={0}
-                  src={company.image_url}
-                  alt={company.name}
-                  className="lg:size-30 size-15 object-contain"
-                />
-              </div>
-            ))}
-          </div>
+                      {data.map((company) => (
+                        <Link href={company.url} key={company.ID} className="flex-shrink-0 justify-center">
+                          <Image
+                            width={0}
+                            height={0}
+                            src={company.image_url}
+                            alt={company.name}
+                            className="lg:size-30 size-15 object-contain"
+                          />
+                        </Link>
+                      ))}
+                    </div>
         </>
     
     </main>

@@ -1,12 +1,49 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import api from "../services/api_service";
+import timeAgo from "../utils/time_ago";
+import { AxiosResponse } from "axios";
 
-const JobCardSkillBased = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: "left" | "right") => {
+const JobCard = () => {
+
+  // interface Data {
+  //   jobID: string;
+  //   Job_title: string;
+  //   location: string;
+  //   working_time:any;
+  //   date: string;
+  //   name: string;
+  //   image_url: string;
+    
+  // }
+  
+  const [data, setData] = useState([
+    
+  ]);
+
+useEffect(() => {
+  console.log("inside useEffect")
+  async function fetchData() {
+    try {
+      const response = await api.jobBasedOnApplies();
+     
+      console.log(response)
+      setData(response.data);
+    } catch (error) {
+      console.error("Error fetching top companies:", error);
+    }
+  }
+  fetchData();
+}, [])
+
+
+
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
     if (scrollRef.current) {
       const scrollAmount = 300;
       scrollRef.current.scrollBy({
@@ -15,66 +52,9 @@ const JobCardSkillBased = () => {
       });
     }
   };
+  
 
-  const jobs = [
-    {
-      company: "google",
-      jobTitle: "Senior Product Manager",
-      location: "Pune, Maharashtra",
-      jobType: "Full Time",
-      postedDate: "March 14, 2025",
-      detailsLink: "#",
-    },
-    {
-      company: "google",
-      jobTitle: "Senior Product Manager",
-      location: "Pune, Maharashtra",
-      jobType: "Full Time",
-      postedDate: "March 14, 2025",
-      detailsLink: "#",
-    },
-    {
-      company: "google",
-      jobTitle: "Senior Product Manager",
-      location: "Pune, Maharashtra",
-      jobType: "Full Time",
-      postedDate: "March 14, 2025",
-      detailsLink: "#",
-    },
-    {
-      company: "google",
-      jobTitle: "Senior Product Manager",
-      location: "Pune, Maharashtra",
-      jobType: "Full Time",
-      postedDate: "March 14, 2025",
-      detailsLink: "#",
-    },
-    {
-      company: "google",
-      jobTitle: "Software Engineer",
-      location: "Bangalore, Karnataka",
-      jobType: "Part Time",
-      postedDate: "March 12, 2025",
-      detailsLink: "#",
-    },
-    {
-      company: "google",
-      jobTitle: "Senior Product Manager",
-      location: "Pune, Maharashtra",
-      jobType: "Full Time",
-      postedDate: "March 14, 2025",
-      detailsLink: "#",
-    },
-    {
-      company: "google",
-      jobTitle: "Software Engineer",
-      location: "Bangalore, Karnataka",
-      jobType: "Part Time",
-      postedDate: "March 12, 2025",
-      detailsLink: "#",
-    },
-  ];
-
+ 
   return (
     <div className="bg-white">
       <div
@@ -85,7 +65,7 @@ const JobCardSkillBased = () => {
           <h1 className="pt-10 text-center md:text-3xl font-Montserrat font-bold text-blue-500">
             Jobs Based On Your Applies
           </h1>
-          <h3 className="float-right pr-10">See All &#x27A4;</h3>
+          {/* <h3 className="float-right pr-10">See All &#x27A4;</h3> */}
 
           {/* Slide buttons */}
           <div className="md:flex hidden justify-end gap-2 pr-10">
@@ -108,10 +88,10 @@ const JobCardSkillBased = () => {
             ref={scrollRef}
             className="flex pt-6 overflow-x-auto w-full md:justify-st pl-10 gap-5 items-center scroll-smooth no-scrollbar"
           >
-            {jobs.map((job, index) => {
+            {data.map((job) => {
               return (
                 <div
-                  key={index}
+                  key={job.jobID}
                   className="flex flex-col justify-between items-center p-2 bg-white shadow-xl rounded-lg border border-gray-300"
                 >
                   <div className=" rounded-xl md:w-[26vw] lg:w-[20vw] xl:w-[16vw] w-[50vw] sm:w-[35vw] h-full p-2">
@@ -119,13 +99,13 @@ const JobCardSkillBased = () => {
                       <div className="flex gap-1">
                         <Image
                           className="size-8"
-                          src="/google.svg"
+                          src={job.image_url}
                           alt="company logo"
                           width={0}
                           height={0}
                         />
                         <p className="text-sm text-gray-600 mt-2">
-                          {job.company}
+                          {job.job_title}
                         </p>
                       </div>
                       <div className="flex gap-1">
@@ -174,7 +154,7 @@ const JobCardSkillBased = () => {
 
                     <div className="flex justify-between h-[4vh] w-full mt-2 items-end">
                       <p className="text-sm text-gray-600">
-                        Posted Date: {job.postedDate}
+                      Posted: {timeAgo(job.date)}
                       </p>
                     </div>
                   </div>
@@ -194,4 +174,4 @@ const JobCardSkillBased = () => {
   );
 };
 
-export default JobCardSkillBased;
+export default JobCard;

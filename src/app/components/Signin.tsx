@@ -13,10 +13,22 @@ const Signin = () => {
   // 🔁 Redirect if already logged in
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token) {
-      router.push("/afterlogin");
+    const role = localStorage.getItem("role");
+    
+
+    if (token && role) {
+      // Redirect based on role
+      if (role == "0") {
+        router.push("/dash");
+      } else if (role == "1") {
+        router.push("/employer/employerdashboard");
+      }
     }
-  }, []);
+    else{
+      router.push("/signin");
+    }
+   
+  }, [router]);
 
   const handleClose = () => {
     router.push("/");
@@ -31,8 +43,14 @@ const Signin = () => {
 
       // Save token if your API returns one
       localStorage.setItem("token", response.data.token);
+      localStorage.setItem("role", response.data.role);
+      localStorage.setItem("userID", response.data.userID);
 
-      router.push("/afterlogin");
+      if (response.data.role == "0") {
+        router.push("/dash");
+      } else if (response.data.role == "1") {
+        router.push("/employer/employerdashboard");
+      }
     } catch (error) {
       console.error("Login failed:", error);
       alert("Login failed. Check credentials.");

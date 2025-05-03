@@ -23,7 +23,7 @@ const Header = () => {
         {/* Logo */}
         <div className="h-full flex items-center justify-start w-1/3">
           <div className="h-full p-2">
-            <Image
+            <Image  
               className="h-full w-full object-cover p-4"
               src="/logo.jpg"
               alt=""

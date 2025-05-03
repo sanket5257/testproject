@@ -34,7 +34,7 @@
     ".next/types/**/*.ts",
     "next-env.d.ts",
     "out/types/**/*.ts"
-  ],
+, "src/app/components/JobCard.jsx", "src/app/components/JobCardSkillBased.jsx", "src/app/services/api_service.js", "src/app/dash2/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

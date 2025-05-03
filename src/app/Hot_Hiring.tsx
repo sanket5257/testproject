@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import api from "./services/api_service";
 import { AxiosResponse } from "axios";
 
-import Image from "next/image";
+
 const Page1 = () => {
   interface Data {
     name: string;

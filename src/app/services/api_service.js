@@ -1,14 +1,32 @@
 import axios from "axios";
 
 class ApiService {
-  readonly base_url: string = "http://192.168.1.222:4000";
-  private axiosInstance = axios.create({
-    baseURL: this.base_url,
-    withCredentials: true,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+   base_url = "https://api.textilevoice.com";
+  
+  
+
+  constructor() {
+    this.axiosInstance = axios.create({
+      baseURL: this.base_url,
+      withCredentials: true,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    // <-- Here: add interceptor to attach token
+    this.axiosInstance.interceptors.request.use(
+      (config) => {
+        const token = localStorage.getItem("token"); 
+        if (token && config.headers) {
+          config.headers["Authorization"] = `Bearer ${token}`;
+        }
+        return config;
+      },
+      (error) => Promise.reject(error)
+    );
+  }
+
 
   // GET methods
   async getHotHiring() {
@@ -33,10 +51,14 @@ class ApiService {
   async getTieUpInstitute() {
     return await this.axiosInstance.get("/tie_up_institute");
   }
+  
 
   // POST methods (example)
-  async login(email: string, password: string) {
+  async login(email, password ) {
     return await this.axiosInstance.post("/login", { email , password });
+  }
+  async jobBasedOnApplies() {
+    return await this.axiosInstance.post("/job_based_on_applies");
   }
 
   

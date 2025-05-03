@@ -31,7 +31,7 @@ const Cities = () => {
         }
       }
       fetchData();
-    }, [])
+    }, [data])
 
   return (
     <div className="bg-white">

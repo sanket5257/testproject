@@ -28,7 +28,7 @@ const StudentCard = () => {
       }
     }
     fetchData();
-  }, []);
+  }, [data]);
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
