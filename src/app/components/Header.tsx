@@ -23,13 +23,15 @@ const Header = () => {
         {/* Logo */}
         <div className="h-full flex items-center justify-start w-1/3">
           <div className="h-full p-2">
-            <Image  
-              className="h-full w-full object-cover p-4"
-              src="/logo.jpg"
-              alt=""
-              width={50}
-              height={50}
-            />
+            <Link href="/">
+              <Image
+                className="h-full w-full object-cover p-4"
+                src="/logo.jpg"
+                alt=""
+                width={50}
+                height={50}
+              />
+            </Link>
           </div>
         </div>
 
@@ -45,9 +47,14 @@ const Header = () => {
 
         {/* Navigation (for md and above) */}
         <div className="hidden lg:flex lg:text-sm justify-evenly items-center w-1/3">
-        <Link href="/">Home</Link>
+          <Link href="/">Home</Link>
           <h1>Blog</h1>
-          <a target="_blank" href="https://api.whatsapp.com/send/?phone=918308463462&text&type=phone_number&app_absent=0">Community</a>
+          <a
+            target="_blank"
+            href="https://api.whatsapp.com/send/?phone=918308463462&text&type=phone_number&app_absent=0"
+          >
+            Community
+          </a>
           <Link href="#exhibition">Exhibitions</Link>
         </div>
 
@@ -56,14 +63,14 @@ const Header = () => {
           <div className="hidden lg:block text-black">
             <a href="">8308463462 </a>
           </div>
-          <a href="/signin"
-            
+          <a
+            href="/signin"
             className="bg-[#0866FF] flex justify-center items-center text-white rounded-md md:h-9 md:w-24"
           >
             Sign In
           </a>
-          <a href="/getstarted"
-            
+          <a
+            href="/getstarted"
             className="bg-[#0866FF] flex justify-center items-center text-white rounded-md md:h-9 md:w-24"
           >
             Sign Up
@@ -76,21 +83,29 @@ const Header = () => {
         <div className="lg:hidden w-full bg-white absolute top-[7vh] left-0 px-5 py-3 flex flex-col items-center gap-3">
           <Link href="/">Home</Link>
           <h1>Blog</h1>
-          <a target="_blank" href="https://api.whatsapp.com/send/?phone=918308463462&text&type=phone_number&app_absent=0">Community</a>
-          <a href="#exhibition">Exhibitions</a>
+          <a
+            target="_blank"
+            href="https://api.whatsapp.com/send/?phone=918308463462&text&type=phone_number&app_absent=0"
+          >
+            Community
+          </a>
+          <a href="/#exhibition">Exhibitions</a>
           <div className="flex flex-col gap-2 justify-center items-center w-full">
-            <a href="/getstarted" className="bg-gradient-to-bl flex justify-center items-center from-[#007BFF] to-[#004C99] text-white rounded-md h-9 w-[35vw]">
+            <a
+              href="/getstarted"
+              className="bg-gradient-to-bl flex justify-center items-center from-[#007BFF] to-[#004C99] text-white rounded-md h-9 w-[35vw]"
+            >
               Sign Up
             </a>
-            <a href="/signin"
-   className="bg-gradient-to-bl from-[#007BFF] flex justify-center items-center to-[#004C99] text-white rounded-md h-9 w-[35vw] ">
+            <a
+              href="/signin"
+              className="bg-gradient-to-bl from-[#007BFF] flex justify-center items-center to-[#004C99] text-white rounded-md h-9 w-[35vw] "
+            >
               Sign In
             </a>
           </div>
         </div>
       )}
-
-      
     </div>
   );
 };
