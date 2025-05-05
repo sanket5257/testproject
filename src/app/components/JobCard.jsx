@@ -3,12 +3,10 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import api from "../services/api_service";
-import time from "../utils/time_ago.js";
+import timeAgo from "../utils/time_ago.js";
 import { AxiosResponse } from "axios";
 
-
 const JobCard = () => {
-
   // interface Data {
   //   jobID: string;
   //   Job_title: string;
@@ -17,29 +15,25 @@ const JobCard = () => {
   //   date: string;
   //   name: string;
   //   image_url: string;
-    
+
   // }
-  
-  const [data, setData] = useState([
-    
-  ]);
 
-useEffect(() => {
-  console.log("inside useEffect")
-  async function fetchData() {
-    try {
-      const response = await api.jobBasedOnApplies();
-     
-      console.log(response)
-      setData(response.data);
-    } catch (error) {
-      console.error("Error fetching top companies:", error);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    console.log("inside useEffect");
+    async function fetchData() {
+      try {
+        const response = await api.jobBasedOnApplies();
+
+        console.log(response);
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching top companies:", error);
+      }
     }
-  }
-  fetchData();
-}, [])
-
-
+    fetchData();
+  }, []);
 
   const scrollRef = useRef(null);
 
@@ -52,9 +46,7 @@ useEffect(() => {
       });
     }
   };
-  
 
- 
   return (
     <div className="bg-white">
       <div
@@ -154,7 +146,7 @@ useEffect(() => {
 
                     <div className="flex justify-between h-[4vh] w-full mt-2 items-end">
                       <p className="text-sm text-gray-600">
-                      Posted: {timeAgo(job.date)}
+                        Posted: {timeAgo(job.date)}
                       </p>
                     </div>
                   </div>
