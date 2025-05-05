@@ -89,7 +89,7 @@ const Header = () => {
           >
             Community
           </a>
-          <a href="/#exhibition">Exhibitions</a>
+          <Link href="/#exhibition">Exhibitions</Link>
           <div className="flex flex-col gap-2 justify-center items-center w-full">
             <a
               href="/getstarted"

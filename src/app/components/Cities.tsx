@@ -23,7 +23,6 @@ const Cities = () => {
       try {
         const response: AxiosResponse<Data[]> = await api.getMajorCities();
         setData(response.data);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching top companies:", error);
       }

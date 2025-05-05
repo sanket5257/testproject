@@ -22,7 +22,6 @@ const StudentCard = () => {
       try {
         const response: AxiosResponse<Data[]> = await api.getStudentsPlaced();
         setData(response.data);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching student data:", error);
       }
