@@ -22,20 +22,23 @@ const StudentCard = () => {
       try {
         const response: AxiosResponse<Data[]> = await api.getStudentsPlaced();
         setData(response.data);
-        console.log(data)
+        console.log(data);
       } catch (error) {
         console.error("Error fetching student data:", error);
       }
     }
     fetchData();
-  }, [data]);
+  }, []);
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollTo = direction === "left" ? scrollLeft - clientWidth : scrollLeft + clientWidth;
+      const scrollTo =
+        direction === "left"
+          ? scrollLeft - clientWidth
+          : scrollLeft + clientWidth;
       scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
     }
   };
@@ -85,7 +88,9 @@ const StudentCard = () => {
               />
               <div className="absolute h-full w-full opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <div className="w-full h-1/2 absolute bottom-0 bg-blue-600 opacity-80 flex flex-col items-center justify-center p-6">
-                  <h1 className="z-10 md:text-4xl font-bold">{student.package}</h1>
+                  <h1 className="z-10 md:text-4xl font-bold">
+                    {student.package}
+                  </h1>
                   <p className="z-10 text-sm md:text-base text-center">
                     {student.tesimonial_text}
                   </p>

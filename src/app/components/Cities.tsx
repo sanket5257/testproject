@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -7,31 +7,29 @@ import api from "../services/api_service";
 import { AxiosResponse } from "axios";
 
 const Cities = () => {
-
   interface Data {
-        city: string;
-        image_url: string;
-        url: string;
-        ID:string;
-        
+    city: string;
+    image_url: string;
+    url: string;
+    ID: string;
+  }
+
+  const [data, setData] = useState([
+    { city: "", image_url: "", url: "", ID: "" },
+  ]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response: AxiosResponse<Data[]> = await api.getMajorCities();
+        setData(response.data);
+        console.log(data);
+      } catch (error) {
+        console.error("Error fetching top companies:", error);
       }
-      
-      const [data, setData] = useState([
-        { city: "", image_url: "", url: "", ID: "" },
-      ]);
-  
-    useEffect(() => {
-      async function fetchData() {
-        try {
-          const response: AxiosResponse<Data[]> = await api.getMajorCities();
-          setData(response.data);
-          console.log(data)
-        } catch (error) {
-          console.error("Error fetching top companies:", error);
-        }
-      }
-      fetchData();
-    }, [data])
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="bg-white">
