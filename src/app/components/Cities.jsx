@@ -7,13 +7,6 @@ import api from "../services/api_service";
 import { AxiosResponse } from "axios";
 
 const Cities = () => {
-  interface Data {
-    city: string;
-    image_url: string;
-    url: string;
-    ID: string;
-  }
-
   const [data, setData] = useState([
     { city: "", image_url: "", url: "", ID: "" },
   ]);
@@ -21,7 +14,7 @@ const Cities = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response: AxiosResponse<Data[]> = await api.getMajorCities();
+        const response = await api.getMajorCities();
         setData(response.data);
       } catch (error) {
         console.error("Error fetching top companies:", error);

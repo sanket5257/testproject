@@ -2,11 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-interface Header3Props {
-  setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Header3: React.FC<Header3Props> = ({ setIsSidebarOpen }) => {
+const Header3 = ({ setIsSidebarOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

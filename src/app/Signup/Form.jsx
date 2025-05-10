@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 const Form = () => {
-  const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget); // Use e.currentTarget, not e.target
     const data = Object.fromEntries(formData.entries()); // Convert to an object
@@ -12,12 +12,14 @@ const Form = () => {
 
   return (
     <div className=" w-full font-Montserrat text-lg">
-
       <div className=" bg-white md:flex md:pt-[15vh] pt-[10vh]">
         <div className="relative overflow-hidden md:flex md:w-1/2 bg-white justify-around items-center">
-          <Image src="/signupbg.jpeg" className="" alt="signup bg" 
-          width={800}
-          height={500}
+          <Image
+            src="/signupbg.jpeg"
+            className=""
+            alt="signup bg"
+            width={800}
+            height={500}
           />
         </div>
         <div className="flex md:w-1/2 justify-center md:px-20 px-4 items-center bg-white">

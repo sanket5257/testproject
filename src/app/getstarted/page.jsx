@@ -1,25 +1,25 @@
-'use client';
+"use client";
 
-import React, { useRef, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
   const router = useRouter();
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as Node;
+    const handleClickOutside = (e) => {
+      const target = e.target;
 
       if (sectionRef.current && !sectionRef.current.contains(target)) {
         router.back();
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [router]);
 
@@ -33,7 +33,9 @@ const Page = () => {
           href="/Signup"
           className="bg-white shadow-xl flex justify-center items-center flex-col cursor-pointer h-[20vh]  border-gray-200 border rounded-2xl p-6 hover:bg-gradient-to-br from-red-200 via-red-100 to-red-50"
         >
-          <h2 className="text-2xl font-bold mb-2 text-black">For Job Seekers</h2>
+          <h2 className="text-2xl font-bold mb-2 text-black">
+            For Job Seekers
+          </h2>
           <p className="text-sm text-black">
             Search and apply for jobs, track applications, and more.
           </p>

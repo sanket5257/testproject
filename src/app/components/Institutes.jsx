@@ -2,33 +2,23 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import api from "../services/api_service";
-import { AxiosResponse } from "axios";
-
 
 const Institutes = () => {
-  interface Data {
-    name: string;
-    image_url: string;
-    url: string;
-    ID:string;
-    
-  }
-  
   const [data, setData] = useState([
     { name: "", image_url: "", url: "", ID: "" },
   ]);
 
-useEffect(() => {
-  async function fetchData() {
-    try {
-      const response: AxiosResponse<Data[]> = await api.getTieUpInstitute();
-      setData(response.data);
-    } catch (error) {
-      console.error("Error fetching top companies:", error);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await api.getTieUpInstitute();
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching top companies:", error);
+      }
     }
-  }
-  fetchData();
-}, [])
+    fetchData();
+  }, []);
 
   return (
     <div>
